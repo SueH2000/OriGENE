@@ -1,4 +1,4 @@
-samples_file: samples.tsv
+samples_file: config/samples.tsv
 
 output_dir: results/mutation_features
 work_dir: results/mutation_work
