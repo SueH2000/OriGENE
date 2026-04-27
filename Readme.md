@@ -27,12 +27,14 @@ OriGENE is a deep learning framework that predicts cancer driver genes from hist
 ```
 OriGENE_published/
 ├── epigenetic_snakemake_pipeline/   # ChIP-seq download → bedGraph workflow
-├── mutation_feature_pipeline/       # VCF processing and mutation feature extraction
+├── mutation(VCF)_snakemake_pipeline/# VCF processing → VEP
+├── mutation_feature_pipeline/       # Mutation feature extraction
 ├── Data/                            # Gene lists, CGC reference, diagnostic files
 ├── Tables/                          # Output summary tables
-├── OriGENE-code.ipynb               # Main model: training, evaluation, visualization
-├── OriGENE_Mutation_Branch.ipynb    # Mutation-aware model variant
+├── OriGENE_main_code.ipynb          # Main model: training, evaluation, visualization
+├── OriGENE_mutation_branch.ipynb    # Mutation-aware model variant
 ├── Data-visualization.ipynb         # Exploratory analysis and figures
+├── envs/                            # Environment
 └── README.md
 ```
 
@@ -70,16 +72,13 @@ Raw SRA data  →  Alignment (hg38)  →  Gene-level tracks  →  CNN training  
 
 **Dependencies:**
 
-```bash
-# Core bioinformatics tools (conda recommended)
-conda create -n origene python=3.9
-conda activate origene
-conda install -c bioconda bowtie2 samtools bedtools ucsc-bedsort sra-tools
-conda install -c conda-forge snakemake
+The preprocessing pipelines provide their own environments.  
+For the OriGENE model notebooks, use:
 
-# Python packages
-pip install tensorflow numpy pandas scikit-learn matplotlib seaborn jupyter
-```
+```bash
+conda env create -f envs/origene-model.yaml
+conda activate origene-model
+python -m ipykernel install --user --name origene-model --display-name "Python (origene-model)"
 
 **Clone the repository:**
 
