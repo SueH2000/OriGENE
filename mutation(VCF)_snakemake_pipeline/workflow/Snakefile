@@ -1,0 +1,436 @@
+####################################################################################################
+# Snakemake workflow for variant calling
+#
+# Workflow:
+#   SRA / single-end FASTQ / paired-end FASTQ
+#     -> FASTQ
+#     -> Bowtie2 alignment streamed to sorted BAM
+#     -> duplicate-removed BAM
+#     -> VCF
+#
+# This version avoids writing large intermediate SAM files.
+#
+# Downstream:
+#   VCF -> VEP annotation -> gene-level mutation features
+####################################################################################################
+
+import pandas as pd
+
+configfile: "config/config.yaml"
+
+
+####################################################################################################
+# Configuration
+####################################################################################################
+
+SAMPLES_FILE = config.get("samples_file", "config/samples.tsv")
+SAMPLES = pd.read_csv(SAMPLES_FILE, sep="\t").fillna("")
+
+GENOME = config["genome"]
+
+FASTQ_DIR = config.get("fastq_dir", "results/01_fastq_files")
+SORTED_BAM_DIR = config.get("sorted_bam_dir", "results/02_bam_sorted_files")
+DEDUP_BAM_DIR = config.get("dedup_bam_dir", "results/03_bam_deduplicated_files")
+VCF_DIR = config.get("vcf_dir", "results/04_called_variants")
+
+BOWTIE_THREADS = config.get("bowtie_threads", 6)
+SAMTOOLS_THREADS = config.get("samtools_threads", 6)
+BCFTOOLS_THREADS = config.get("bcftools_threads", 4)
+
+
+####################################################################################################
+# Sample table validation
+####################################################################################################
+
+REQUIRED_COLUMNS = {"sample", "input_type", "read1", "read2"}
+missing_columns = REQUIRED_COLUMNS - set(SAMPLES.columns)
+
+if missing_columns:
+    raise ValueError(
+        f"{SAMPLES_FILE} is missing required columns: {sorted(missing_columns)}"
+    )
+
+SAMPLES["sample"] = SAMPLES["sample"].astype(str)
+SAMPLES["input_type"] = SAMPLES["input_type"].astype(str)
+SAMPLES["read1"] = SAMPLES["read1"].astype(str)
+SAMPLES["read2"] = SAMPLES["read2"].astype(str)
+
+ALLOWED_INPUT_TYPES = {"sra", "fastq_single", "fastq_paired"}
+bad_types = set(SAMPLES["input_type"]) - ALLOWED_INPUT_TYPES
+
+if bad_types:
+    raise ValueError(
+        f"Invalid input_type values in {SAMPLES_FILE}: {sorted(bad_types)}. "
+        f"Allowed values are: {sorted(ALLOWED_INPUT_TYPES)}"
+    )
+
+if SAMPLES["sample"].duplicated().any():
+    duplicated = SAMPLES.loc[SAMPLES["sample"].duplicated(), "sample"].tolist()
+    raise ValueError(f"Duplicated sample names in {SAMPLES_FILE}: {duplicated}")
+
+
+def sample_names():
+    return SAMPLES["sample"].tolist()
+
+
+def sample_row(sample):
+    row = SAMPLES.loc[SAMPLES["sample"] == str(sample)]
+    if row.empty:
+        raise ValueError(f"Sample not found in {SAMPLES_FILE}: {sample}")
+    return row.iloc[0]
+
+
+def input_type_for_sample(wildcards):
+    return sample_row(wildcards.sample)["input_type"]
+
+
+def read1_for_sample(wildcards):
+    return sample_row(wildcards.sample)["read1"]
+
+
+def read2_for_sample(wildcards):
+    return sample_row(wildcards.sample)["read2"]
+
+
+####################################################################################################
+# Final target
+####################################################################################################
+
+rule all:
+    input:
+        expand(f"{VCF_DIR}/{{sample}}.vcf.gz", sample=sample_names()),
+        expand(f"{VCF_DIR}/{{sample}}.vcf.gz.tbi", sample=sample_names())
+
+
+####################################################################################################
+# Step 0: Build Bowtie2 genome index
+####################################################################################################
+
+rule bowtie_index:
+    input:
+        genome=GENOME
+    output:
+        multiext(
+            GENOME,
+            ".1.bt2",
+            ".2.bt2",
+            ".3.bt2",
+            ".4.bt2",
+            ".rev.1.bt2",
+            ".rev.2.bt2",
+        )
+    conda:
+        "../envs/bowtie2.yaml"
+    shell:
+        r"""
+        bowtie2-build {input.genome} {input.genome}
+        """
+
+
+####################################################################################################
+# Step 1A: Prepare FASTQ from SRA
+#
+# input_type = sra
+# read1      = local .sra file or accession readable by fastq-dump
+# read2      = empty
+####################################################################################################
+
+rule prepare_fastq_sra:
+    input:
+        read1=read1_for_sample
+    output:
+        fastq=f"{FASTQ_DIR}/{{sample}}.fastq.gz"
+    params:
+        input_type=input_type_for_sample
+    conda:
+        "../envs/sra_tools.yaml"
+    shell:
+        r"""
+        if [ "{params.input_type}" != "sra" ]; then
+            echo "ERROR: sample {wildcards.sample} is not input_type=sra" >&2
+            exit 1
+        fi
+
+        mkdir -p {FASTQ_DIR}
+        fastq-dump --gzip --stdout {input.read1} > {output.fastq}
+        """
+
+
+####################################################################################################
+# Step 1B: Prepare single-end FASTQ
+#
+# input_type = fastq_single
+# read1      = FASTQ or FASTQ.GZ
+# read2      = empty
+####################################################################################################
+
+rule prepare_fastq_single:
+    input:
+        read1=read1_for_sample
+    output:
+        fastq=f"{FASTQ_DIR}/{{sample}}.fastq.gz"
+    params:
+        input_type=input_type_for_sample
+    conda:
+        "../envs/sra_tools.yaml"
+    shell:
+        r"""
+        if [ "{params.input_type}" != "fastq_single" ]; then
+            echo "ERROR: sample {wildcards.sample} is not input_type=fastq_single" >&2
+            exit 1
+        fi
+
+        mkdir -p {FASTQ_DIR}
+
+        if [[ "{input.read1}" == *.gz ]]; then
+            ln -sf $(realpath {input.read1}) {output.fastq}
+        else
+            gzip -c {input.read1} > {output.fastq}
+        fi
+        """
+
+
+####################################################################################################
+# Step 1C: Prepare paired-end FASTQ
+#
+# input_type = fastq_paired
+# read1      = read 1 FASTQ or FASTQ.GZ
+# read2      = read 2 FASTQ or FASTQ.GZ
+####################################################################################################
+
+rule prepare_fastq_paired:
+    input:
+        read1=read1_for_sample,
+        read2=read2_for_sample
+    output:
+        fastq1=f"{FASTQ_DIR}/{{sample}}_1.fastq.gz",
+        fastq2=f"{FASTQ_DIR}/{{sample}}_2.fastq.gz"
+    params:
+        input_type=input_type_for_sample
+    conda:
+        "../envs/sra_tools.yaml"
+    shell:
+        r"""
+        if [ "{params.input_type}" != "fastq_paired" ]; then
+            echo "ERROR: sample {wildcards.sample} is not input_type=fastq_paired" >&2
+            exit 1
+        fi
+
+        mkdir -p {FASTQ_DIR}
+
+        if [[ "{input.read1}" == *.gz ]]; then
+            ln -sf $(realpath {input.read1}) {output.fastq1}
+        else
+            gzip -c {input.read1} > {output.fastq1}
+        fi
+
+        if [[ "{input.read2}" == *.gz ]]; then
+            ln -sf $(realpath {input.read2}) {output.fastq2}
+        else
+            gzip -c {input.read2} > {output.fastq2}
+        fi
+        """
+
+
+####################################################################################################
+# Step 2A: Align SRA-derived reads directly to sorted BAM
+#
+# This treats SRA input as single-end after fastq-dump, matching the historical workflow.
+####################################################################################################
+
+rule align_sra_to_sorted_bam:
+    input:
+        idx=rules.bowtie_index.output,
+        fastq=rules.prepare_fastq_sra.output.fastq
+    output:
+        bam=f"{SORTED_BAM_DIR}/{{sample}}.sra.sorted.bam"
+    params:
+        idx=GENOME,
+        input_type=input_type_for_sample
+    threads: BOWTIE_THREADS
+    conda:
+        "../envs/bowtie2.yaml"
+    shell:
+        r"""
+        if [ "{params.input_type}" != "sra" ]; then
+            echo "ERROR: sample {wildcards.sample} is not input_type=sra" >&2
+            exit 1
+        fi
+
+        mkdir -p {SORTED_BAM_DIR}
+
+        bowtie2 -x {params.idx} \
+          -p {threads} \
+          -U {input.fastq} \
+        | samtools view -bS - \
+        | samtools sort -@ {threads} -o {output.bam}
+        """
+
+
+####################################################################################################
+# Step 2B: Align single-end FASTQ directly to sorted BAM
+####################################################################################################
+
+rule align_single_to_sorted_bam:
+    input:
+        idx=rules.bowtie_index.output,
+        fastq=rules.prepare_fastq_single.output.fastq
+    output:
+        bam=f"{SORTED_BAM_DIR}/{{sample}}.single.sorted.bam"
+    params:
+        idx=GENOME,
+        input_type=input_type_for_sample
+    threads: BOWTIE_THREADS
+    conda:
+        "../envs/bowtie2.yaml"
+    shell:
+        r"""
+        if [ "{params.input_type}" != "fastq_single" ]; then
+            echo "ERROR: sample {wildcards.sample} is not input_type=fastq_single" >&2
+            exit 1
+        fi
+
+        mkdir -p {SORTED_BAM_DIR}
+
+        bowtie2 -x {params.idx} \
+          -p {threads} \
+          -U {input.fastq} \
+        | samtools view -bS - \
+        | samtools sort -@ {threads} -o {output.bam}
+        """
+
+
+####################################################################################################
+# Step 2C: Align paired-end FASTQ directly to sorted BAM
+####################################################################################################
+
+rule align_paired_to_sorted_bam:
+    input:
+        idx=rules.bowtie_index.output,
+        fastq1=rules.prepare_fastq_paired.output.fastq1,
+        fastq2=rules.prepare_fastq_paired.output.fastq2
+    output:
+        bam=f"{SORTED_BAM_DIR}/{{sample}}.paired.sorted.bam"
+    params:
+        idx=GENOME,
+        input_type=input_type_for_sample
+    threads: BOWTIE_THREADS
+    conda:
+        "../envs/bowtie2.yaml"
+    shell:
+        r"""
+        if [ "{params.input_type}" != "fastq_paired" ]; then
+            echo "ERROR: sample {wildcards.sample} is not input_type=fastq_paired" >&2
+            exit 1
+        fi
+
+        mkdir -p {SORTED_BAM_DIR}
+
+        bowtie2 -x {params.idx} \
+          -p {threads} \
+          -1 {input.fastq1} \
+          -2 {input.fastq2} \
+        | samtools view -bS - \
+        | samtools sort -@ {threads} -o {output.bam}
+        """
+
+
+####################################################################################################
+# Step 2D: Select canonical sorted BAM
+#
+# Mode-specific BAMs avoid rule conflicts. This rule copies the correct mode-specific BAM
+# to a canonical filename used by all downstream rules.
+####################################################################################################
+
+def selected_sorted_bam_input(wildcards):
+    input_type = sample_row(wildcards.sample)["input_type"]
+
+    if input_type == "sra":
+        return f"{SORTED_BAM_DIR}/{wildcards.sample}.sra.sorted.bam"
+
+    if input_type == "fastq_single":
+        return f"{SORTED_BAM_DIR}/{wildcards.sample}.single.sorted.bam"
+
+    if input_type == "fastq_paired":
+        return f"{SORTED_BAM_DIR}/{wildcards.sample}.paired.sorted.bam"
+
+    raise ValueError(f"Unsupported input_type: {input_type}")
+
+
+rule select_sorted_bam:
+    input:
+        bam=selected_sorted_bam_input
+    output:
+        bam=f"{SORTED_BAM_DIR}/{{sample}}.sorted.bam"
+    conda:
+        "../envs/htslib.yaml"
+    shell:
+        r"""
+        mkdir -p {SORTED_BAM_DIR}
+        cp {input.bam} {output.bam}
+        """
+
+
+####################################################################################################
+# Step 3: Remove duplicate reads
+#
+# This preserves the historical workflow logic using samtools rmdup.
+# For modern production workflows, samtools markdup may be preferred.
+####################################################################################################
+
+rule remove_duplicates:
+    input:
+        bam=rules.select_sorted_bam.output.bam
+    output:
+        bam=f"{DEDUP_BAM_DIR}/{{sample}}.sorted.rmdup.bam"
+    conda:
+        "../envs/htslib.yaml"
+    shell:
+        r"""
+        mkdir -p {DEDUP_BAM_DIR}
+        samtools rmdup -s {input.bam} {output.bam}
+        """
+
+
+####################################################################################################
+# Step 4: Index duplicate-removed BAM
+####################################################################################################
+
+rule index_bam:
+    input:
+        bam=rules.remove_duplicates.output.bam
+    output:
+        bai=f"{DEDUP_BAM_DIR}/{{sample}}.sorted.rmdup.bam.bai"
+    threads: SAMTOOLS_THREADS
+    conda:
+        "../envs/htslib.yaml"
+    shell:
+        r"""
+        samtools index -@ {threads} {input.bam}
+        """
+
+
+####################################################################################################
+# Step 5: Call variants
+####################################################################################################
+
+rule call_variants:
+    input:
+        bam=rules.remove_duplicates.output.bam,
+        bai=rules.index_bam.output.bai,
+        reference=GENOME
+    output:
+        vcf=f"{VCF_DIR}/{{sample}}.vcf.gz",
+        index=f"{VCF_DIR}/{{sample}}.vcf.gz.tbi"
+    threads: BCFTOOLS_THREADS
+    conda:
+        "../envs/htslib.yaml"
+    shell:
+        r"""
+        mkdir -p {VCF_DIR}
+
+        bcftools mpileup -Ou -f {input.reference} {input.bam} \
+          | bcftools call -m -v -Oz --threads {threads} > {output.vcf}
+
+        tabix -f -p vcf {output.vcf}
+        """
