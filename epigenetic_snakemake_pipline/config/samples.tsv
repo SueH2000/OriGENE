@@ -1,10 +1,5 @@
-sample_name	SRA
-SRR1947881.1	resources/SRR1947881.1
-SRR1947882.1	resources/SRR1947882.1
-SRR1947883.1	resources/SRR1947883.1
-SRR1947884.1	resources/SRR1947884.1
-SRR1947885.1	resources/SRR1947885.1
-SRR1947886.1	resources/SRR1947886.1
-SRR1947887.1	resources/SRR1947887.1
-SRR1947888.1	resources/SRR1947888.1
-
+sample	input_type	read1	read2
+SRR1947881.1	sra	resources/SRR1947881.1	
+SRR1947882.1	sra	resources/SRR1947882.1	
+example_single	fastq_single	resources/example_single.fastq.gz	
+example_paired	fastq_paired	resources/example_R1.fastq.gz	resources/example_R2.fastq.gz
