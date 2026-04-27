@@ -1,0 +1,3 @@
+sample	input_type	read1	read2
+SRR1947881	fastq_single	data/fastq/SRR1947881.fastq.gz	
+SRR12491691	fastq_paired	data/fastq/SRR12491691_1.fastq.gz	data/fastq/SRR12491691_2.fastq.gz
