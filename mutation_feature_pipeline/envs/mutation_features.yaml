@@ -1,0 +1,17 @@
+name: mutation-features
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.10
+  - ensembl-vep=113
+  - numpy
+  - pandas
+  - cyvcf2
+  - htslib
+  - samtools
+  - tabix
+  - bcftools
+  - samtools
+  - perl

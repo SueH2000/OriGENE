@@ -1,0 +1,105 @@
+Track name	Epigenetic marker	File accession dataset	Sample	Run	SRA number	LAYOUT(single/paired)	# of spots	# of Bases	Alignment percentage (to hg38)	Cell line	Cancer	# Unduplicated and mapped reads							
+14724N	H3K4me3	GSE67471	GSM1647618	1	SRR1947881.1	single	59,251,101	3G	"59251101 reads; of these:
+59251101 (100.00%) were unpaired; of these:
+328587 (0.55%) aligned 0 times
+47722099 (80.54%) aligned exactly 1 time
+11200415 (18.90%) aligned >1 times
+99.45% overall alignment rate"	Lung normal tissue	no	34963546							
+14724T	H3K4me3	GSE67471	GSM1647619	1	SRR1947882.1	single	75,836,608	3.8G	"75836608 reads; of these:
+75836608 (100.00%) were unpaired; of these:
+615624 (0.81%) aligned 0 times
+53634029 (70.72%) aligned exactly 1 time
+21586955 (28.47%) aligned >1 times
+99.19% overall alignment rate"	Lung tumor tissue	yes	66048923							
+155N	H3K4me3	GSE67471	GSM1647620	1	SRR1947883.1	single	62,763,610	3.1G	"62763610 reads; of these:
+62763610 (100.00%) were unpaired; of these:
+397733 (0.63%) aligned 0 times
+52064253 (82.95%) aligned exactly 1 time
+10301624 (16.41%) aligned >1 times
+99.37% overall alignment rate"	Liver normal tissue	no	33963444							
+155T	H3K4me3	GSE67471	GSM1647621	1	SRR1947884.1	single	65,673,468	3.3G	"65673468 reads; of these:
+65673468 (100.00%) were unpaired; of these:
+403735 (0.61%) aligned 0 times
+48855819 (74.39%) aligned exactly 1 time
+16413914 (24.99%) aligned >1 times
+99.39% overall alignment rate"	Liver tumor tissue	yes	47459130							
+185N	H3K4me3	GSE67471	GSM1647622	1	SRR1947885.1	single	64,811,514	3.2G	"64811514 reads; of these:
+64811514 (100.00%) were unpaired; of these:
+502695 (0.78%) aligned 0 times
+54734233 (84.45%) aligned exactly 1 time
+9574586 (14.77%) aligned >1 times
+99.22% overall alignment rate"	Liver normal tissue	no	29153715							
+185T	H3K4me3	GSE67471	GSM1647623	1	SRR1947886.1	single	61,400,238	3.1G	"61400238 reads; of these:
+61400238 (100.00%) were unpaired; of these:
+483087 (0.79%) aligned 0 times
+49917294 (81.30%) aligned exactly 1 time
+10999857 (17.92%) aligned >1 times
+99.21% overall alignment rate"	Liver tumor tissue	yes	30034579							
+61N	H3K4me3	GSE67471	GSM1647624	1	SRR1947887.1	single	34,545,390	1.7G	"34545390 reads; of these:
+34545390 (100.00%) were unpaired; of these:
+250884 (0.73%) aligned 0 times
+27131609 (78.54%) aligned exactly 1 time
+7162897 (20.73%) aligned >1 times
+99.27% overall alignment rate"	Lung normal tissue	no	24715000							
+61T	H3K4me3	GSE67471	GSM1647625	1	SRR1947888.1	single	32,711,856	1.6G	"32711856 reads; of these:
+32711856 (100.00%) were unpaired; of these:
+234645 (0.72%) aligned 0 times
+24353957 (74.45%) aligned exactly 1 time
+8123254 (24.83%) aligned >1 times
+99.28% overall alignment rate"	Lung tumor tissue	yes	28547876							
+																			
+																			
+Track name	Epigenetic marker	File accession dataset	Sample	Run	SRA number	LAYOUT(single/paired)	# of spots	# of Bases	Alignment percentage (to hg38)	Cell line	Cancer	# Unduplicated and mapped reads							
+USC_ChipSeq_NT2-D1_H3K27me3B_UCDavis	H3K27me3	GSE31755	GSM788071	1	SRR341140	single	47,794,881	1.5G	"47794881 reads; of these: 47794881 (100.00%) were unpaired; of these: 26792006 (56.06%) aligned 0 times 14415524 (30.16%) aligned exactly 1 time 6587351 (13.78%) aligned >1 times 43.94% overall alignment rate"	NT2D1	yes	20525537							
+USC_ChipSeq_NT2-D1_H3K4me3B_UCDavis	H3K4me3	GSE31755	GSM788072	1	SRR341143	single	23,352,601	747.3M	"23352601 reads; of these:23352601 (100.00%) were unpaired; of these: 6568415 (28.13%) aligned 0 times 12365536 (52.95%) aligned exactly 1 time 4418650 (18.92%) aligned >1 times 71.87% overall alignment rate"	NT2D1	yes	16123074							
+USC_ChipSeq_NT2-D1_Input_UCDavis	Input	GSE31755	GSM788077	1	SRR341151	single	84,074,870	2.7G	"84074870 reads; of these: 84074870 (100.00%) were unpaired; of these: 19964425 (23.75%) aligned 0 times 44976412 (53.50%) aligned exactly 1 time 19134033 (22.76%) aligned >1 times 76.25% overall alignment rate"	NT2D1	yes	62675697							
+USC_ChipSeq_NT2-D1_H3K9me3_UCDavis	H3K9me3	GSE31755	GSM788080	3	SRR341159	single	33,349,917	1.2G	"33349917 reads; of these: 33349917 (100.00%) were unpaired; of these: 5139082 (15.41%) aligned 0 times 13873266 (41.60%) aligned exactly 1 time 14337569 (42.99%) aligned >1 times 84.59% overall alignment rate"	NT2D1	yes	24386417							
+USC_ChipSeq_NT2-D1_H3K36me3B_UCDavis	H3K36me3	GSE31755	GSM788081	2	SRR341162	single	32,522,365 	1G	"32522365 reads; of these: 32522365 (100.00%) were unpaired; of these: 3843664 (11.82%) aligned 0 times 19569628 (60.17%) aligned exactly 1 time 9109073 (28.01%) aligned >1 times 88.18% overall alignment rate"	NT2D1	yes	27546099							
+USC_ChipSeq_NT2-D1_H3K4me1_UCDavis	H3K4me1	GSE31755	GSM788083	2	SRR341166	single	23,047,221	737.5M	"23047221 reads; of these: 23047221 (100.00%) were unpaired; of these: 2996309 (13.00%) aligned 0 times 14371307 (62.36%) aligned exactly 1 time 5679605 (24.64%) aligned >1 times 87.00% overall alignment rate"	NT2D1	yes	19772943							
+USC_ChipSeq_NT2-D1_H3K9acB_UCDavis	H3K9ac	GSE31755	GSM788086	2	SRR341172	single	18,938,058	606M	"18938058 reads; of these:  18938058 (100.00%) were unpaired; of these     2834722 (14.97%) aligned 0 times     11809050 (62.36%) aligned exactly 1 time     4294286 (22.68%) aligned >1 times 85.03% overall alignment rate"	NT2D1	yes	15673762							
+																			
+																			
+																			
+Multiple markers (40 kbp)	Threshold	Sensitivity (Sn)	Specificity (Sp)	Accuracy (Acc)	Precision (Pr)	AUC	90% C,I	AUPRC											
+Lung I	0,5	0,790	0,660	0,725	0,699	0,794	[0,774 - 0,812]	0,771											
+	0,75	0,365	0,909	0,637	0,801														
+Lung II	0,5	0,795	0,655	0,725	0,697	0,787	[0,768 - 0,807]	0,749											
+	0,75	0,373	0,904	0,638	0,795														
+Liver I	0,5	0,772	0,644	0,708	0,684	0,777	[0,757 - 0,798]	0,745											
+	0,75	0,396	0,894	0,645	0,789														
+Liver II	0,5	0,755	0,651	0,703	0,684	0,784	[0,764 - 0,804]	0,753											
+	0,75	0,387	0,904	0,645	0,801														
+NT2-D1	0,5	0,743	0,651	0,697	0,680	0,764	[0,743 - 0,785]	0,730											
+	0,75	0,385	0,882	0,633	0,765														
+Liver II specific	0,5	0,567	0,660	0,614	0,625	0,667	[0,638 - 0,697]	0,671											
+	0,75	0,310	0,885	0,598	0,730														
+Single markers (5 kbp)	Threshold	Sensitivity (Sn)	Specificity (Sp)	Accuracy (Acc)	Precision (Pr)	AUC	90% C,I	AUPRC											
+Lung I H3K4me3	0,5	0,703	0,697	0,700	0,699	0,756	[0,734 - 0,777]	0,737											
+	0,75	0,226	0,939	0,583	0,788														
+Liver I H3K4me3	0,5	0,724	0,662	0,693	0,681	0,747	[0,724 - 0,768]	0,711											
+	0,75	0,169	0,945	0,557	0,755														
+NT2-D1  H3K4me3	0,5	0,697	0,634	0,666	0,656	0,719	[0,697 - 0,742]	0,671											
+	0,75	0,059	0,971	0,515	0,672														
+NT2-D1 I H3K9ac	0,5	0,652	0,627	0,640	0,636	0,700	[0,677 - 0,722]	0,657											
+	0,75	0,048	0,977	0,512	0,673														
+NT2-D1 H3K36me3	0,5	0,396	0,722	0,559	0,588	0,582	[0,557 - 0,606]	0,582											
+	0,75	0,000	1,000	0,500	-														
+NT2-D1 H3K9me3	0,5	0,000	1,000	0,500	-	0,516	[0,491 - 0,54]	0,559											
+	0,75	0,000	1,000	0,500	-														
+NT2-D1 H3K27me3	0,5	0,033	0,979	0,506	0,615	0,514	[0,490 - 0,54]	0,526											
+	0,75	0,000	1,000	0,500	-														
+NT2-D1 H3K4me1	0,5	0,199	0,801	0,500	0,500	0,502	[0,477 - 0,526]	0,517											
+	0,75	0,000	1,000	0,500	-														
+H3K4me3 single marker (40kbp)	Threshold	Sensitivity (Sn)	Specificity (Sp)	Accuracy (Acc)	Precision (Pr)	AUC	90% C,I	AUPRC											
+Lung I	0,500	0,759	0,677	0,718	0,701	0,788	[0,769 - 0,808]	0,764											
+	0,750	0,407	0,904	0,655	0,809														
+Lung II	0,500	0,779	0,653	0,716	0,692	0,781	[0,761 - 0,8]	0,736											
+	0,750	0,410	0,891	0,651	0,790														
+Liver I	0,500	0,758	0,657	0,708	0,689	0,784	[0,763 - 0,803]	0,753											
+	0,750	0,381	0,915	0,648	0,817														
+Liver II	0,500	0,763	0,656	0,710	0,689	0,776	[0,755 - 0,795]	0,736											
+	0,750	0,377	0,902	0,640	0,794														
+NT2-D1 	0,500	0,752	0,645	0,699	0,680	0,759	[0,737 - 0,781]	0,705											
+	0,750	0,287	0,902	0,595	0,746														
+Liver II specific	0,500	0,537	0,757	0,647	0,688	0,697	[0,666 - 0,726]	0,704											
+	0,750	0,286	0,917	0,602	0,775														

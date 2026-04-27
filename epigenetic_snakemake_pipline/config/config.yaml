@@ -1,0 +1,2 @@
+samples: 'config/samples.tsv'
+genome: 'resources/genome/hg38.fa'

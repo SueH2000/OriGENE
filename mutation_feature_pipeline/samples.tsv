@@ -1,0 +1,2 @@
+sample	raw_vcf
+SRR1947881	../variant_calling_pipeline/results/05_called_variants/SRR1947881.vcf.gz

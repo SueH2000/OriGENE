@@ -1,0 +1,28 @@
+samples_file: samples.tsv
+
+output_dir: results/mutation_features
+work_dir: results/mutation_work
+cds_lengths: data/reference/Final_CDS_lengths.csv
+mutation_feature_script: scripts/mutation_feature_extractor.py
+
+
+hifi_threshold: 0.85
+lofi_threshold: 0.15
+pseudocount: 1.0
+progress_every: 10000
+
+vep:
+  vep_path: vep
+  dir_cache: resources/vep_cache
+  fasta: resources/vep_cache/homo_sapiens/113_GRCh38/Homo_sapiens.GRCh38.dna.toplevel.fa.gz
+  assembly: GRCh38
+  dbnsfp: resources/dbnsfp/dbNSFP5.1a_grch38.gz
+  dbnsfp_fields:
+    - Polyphen2_HDIV_score
+    - Polyphen2_HVAR_score
+    - REVEL_score
+    - SIFT_score
+    - MutationTaster_score
+    - MetaLR_score
+    - MetaSVM_score
+  extra_args: ""
