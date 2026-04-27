@@ -1,0 +1,232 @@
+####################################################################################################
+# Snakemake workflow for mutation feature extraction
+#
+# Workflow:
+#   raw VCF
+#   -> chromosome-name normalization
+#   -> primary-contig filtering
+#   -> VEP annotation with dbNSFP
+#   -> mutation feature extraction
+#   -> mutation _features_<sample>.csv
+####################################################################################################
+
+import pandas as pd
+
+
+configfile: "config/config.yaml"
+
+
+####################################################################################################
+# Configuration
+####################################################################################################
+
+SAMPLES_FILE = config.get("samples_file", "samples.tsv")
+SAMPLES = pd.read_csv(SAMPLES_FILE, sep="\t").fillna("")
+
+OUTPUT_DIR = config.get("output_dir", "results/mutation_features")
+WORK_DIR = config.get("work_dir", "results/mutation_work")
+
+CDS_LENGTHS = config["cds_lengths"]
+
+SCRIPT = config.get(
+    "mutation_feature_script",
+    workflow.source_path("../scripts/mutation_feature_extractor.py"),
+)
+
+VEP_PATH = config["vep"].get("vep_path", "vep")
+VEP_CACHE = config["vep"]["dir_cache"]
+VEP_FASTA = config["vep"]["fasta"]
+VEP_ASSEMBLY = config["vep"].get("assembly", "GRCh38")
+DBNSFP = config["vep"]["dbnsfp"]
+DBNSFP_FIELDS = ",".join(config["vep"]["dbnsfp_fields"])
+VEP_EXTRA_ARGS = config["vep"].get("extra_args", "")
+
+HIFI_THRESHOLD = config.get("hifi_threshold", 0.85)
+LOFI_THRESHOLD = config.get("lofi_threshold", 0.15)
+PSEUDOCOUNT = config.get("pseudocount", 1.0)
+PROGRESS_EVERY = config.get("progress_every", 10000)
+
+
+####################################################################################################
+# Sample table validation
+####################################################################################################
+
+REQUIRED_COLUMNS = {"sample", "raw_vcf"}
+missing_columns = REQUIRED_COLUMNS - set(SAMPLES.columns)
+
+if missing_columns:
+    raise ValueError(
+        f"{SAMPLES_FILE} is missing required columns: {sorted(missing_columns)}"
+    )
+
+SAMPLES["sample"] = SAMPLES["sample"].astype(str)
+SAMPLES["raw_vcf"] = SAMPLES["raw_vcf"].astype(str)
+
+if SAMPLES["sample"].duplicated().any():
+    duplicated = SAMPLES.loc[SAMPLES["sample"].duplicated(), "sample"].tolist()
+    raise ValueError(f"Duplicated sample names in {SAMPLES_FILE}: {duplicated}")
+
+
+def sample_names():
+    return SAMPLES["sample"].tolist()
+
+
+def raw_vcf_for_sample(wildcards):
+    row = SAMPLES.loc[SAMPLES["sample"] == str(wildcards.sample)]
+    if row.empty:
+        raise ValueError(f"Sample not found in {SAMPLES_FILE}: {wildcards.sample}")
+    return row.iloc[0]["raw_vcf"]
+
+
+####################################################################################################
+# Final target
+####################################################################################################
+
+rule all:
+    input:
+        expand(f"{OUTPUT_DIR}/mutation_features_{{sample}}.csv", sample=sample_names())
+
+####################################################################################################
+# Step 1: Normalize chromosome names
+#
+# VEP cache/reference uses chromosome names without the "chr" prefix.
+# This rule removes "chr" from VCF records while keeping header lines unchanged.
+####################################################################################################
+
+rule strip_chr_prefix:
+    input:
+        raw_vcf=raw_vcf_for_sample
+    output:
+        vcf=f"{WORK_DIR}/nochr/{{sample}}.nochr.vcf.gz",
+        index=f"{WORK_DIR}/nochr/{{sample}}.nochr.vcf.gz.tbi"
+    conda:
+        "../envs/mutation_features.yaml"
+    shell:
+        r"""
+        mkdir -p $(dirname {output.vcf})
+
+        zcat {input.raw_vcf} \
+          | sed '/^#/! s/^chr//' \
+          | bgzip -c > {output.vcf}
+
+        tabix -f -p vcf {output.vcf}
+        """
+
+
+####################################################################################################
+# Step 2: Keep contigs present in the VEP FASTA
+#
+# This removes ALT/random/unplaced contigs before VEP annotation.
+# The region list is derived from the configured VEP FASTA index to match the reference used by VEP.
+####################################################################################################
+
+rule keep_primary_chromosomes:
+    input:
+        vcf=f"{WORK_DIR}/nochr/{{sample}}.nochr.vcf.gz",
+        index=f"{WORK_DIR}/nochr/{{sample}}.nochr.vcf.gz.tbi",
+        fasta=VEP_FASTA
+    output:
+        vcf=f"{WORK_DIR}/primary/{{sample}}.primary.vcf.gz",
+        index=f"{WORK_DIR}/primary/{{sample}}.primary.vcf.gz.tbi",
+        regions=f"{WORK_DIR}/primary/{{sample}}.primary_chromosomes.list"
+    conda:
+        "../envs/mutation_features.yaml"
+    shell:
+        r"""
+        mkdir -p $(dirname {output.vcf})
+
+        samtools faidx {input.fasta}
+
+        cut -f1 {input.fasta}.fai > {output.regions}
+
+        REGIONS=$(paste -sd, {output.regions})
+
+        bcftools view \
+          -r "$REGIONS" \
+          -Oz \
+          -o {output.vcf} \
+          {input.vcf}
+
+        tabix -f -p vcf {output.vcf}
+        """
+
+
+####################################################################################################
+# Step 3: Annotate variants with Ensembl VEP and dbNSFP
+#
+# VEP is expected to be available inside the conda environment, so `vep_path`
+# should normally be set to "vep" in config/config.yaml.
+####################################################################################################
+
+rule annotate_with_vep:
+    input:
+        vcf=f"{WORK_DIR}/primary/{{sample}}.primary.vcf.gz",
+        index=f"{WORK_DIR}/primary/{{sample}}.primary.vcf.gz.tbi"
+    output:
+        vcf=f"{WORK_DIR}/vep/{{sample}}.vep.vcf.gz",
+        index=f"{WORK_DIR}/vep/{{sample}}.vep.vcf.gz.tbi"
+    params:
+        vep_path=VEP_PATH,
+        dir_cache=VEP_CACHE,
+        fasta=VEP_FASTA,
+        assembly=VEP_ASSEMBLY,
+        dbnsfp=DBNSFP,
+        dbnsfp_fields=DBNSFP_FIELDS,
+        extra_args=VEP_EXTRA_ARGS
+    conda:
+        "../envs/mutation_features.yaml"
+    shell:
+        r"""
+        mkdir -p $(dirname {output.vcf})
+
+        {params.vep_path} \
+          --input_file {input.vcf} \
+          --output_file {output.vcf} \
+          --offline --cache \
+          --dir_cache {params.dir_cache} \
+          --fasta {params.fasta} \
+          --assembly {params.assembly} \
+          --vcf --compress_output bgzip \
+          --no_stats --force_overwrite \
+          --symbol --canonical --pick \
+          --plugin dbNSFP,{params.dbnsfp},{params.dbnsfp_fields} \
+          {params.extra_args}
+
+        tabix -f -p vcf {output.vcf}
+        """
+
+
+####################################################################################################
+# Step 4: Extract gene-level mutation features
+#
+# The extractor reads the VEP CSQ field, maps variants to genes using SYMBOL,
+# and writes one row per gene from the CDS length reference file.
+####################################################################################################
+
+rule extract_mutation_features:
+    input:
+        vcf=f"{WORK_DIR}/vep/{{sample}}.vep.vcf.gz",
+        cds=CDS_LENGTHS
+    output:
+        csv=f"{OUTPUT_DIR}/mutation_features_{{sample}}.csv"
+    params:
+        hifi=HIFI_THRESHOLD,
+        lofi=LOFI_THRESHOLD,
+        pseudocount=PSEUDOCOUNT,
+        progress_every=PROGRESS_EVERY
+    conda:
+        "../envs/mutation_features.yaml"
+    shell:
+        r"""
+        mkdir -p {OUTPUT_DIR}
+
+        python {SCRIPT} \
+          --vcf {input.vcf} \
+          --cds-lengths {input.cds} \
+          --sample-id {wildcards.sample} \
+          --output-dir {OUTPUT_DIR} \
+          --hifi-threshold {params.hifi} \
+          --lofi-threshold {params.lofi} \
+          --pseudocount {params.pseudocount} \
+          --progress-every {params.progress_every}
+        """
