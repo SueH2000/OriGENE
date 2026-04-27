@@ -1,0 +1,15 @@
+# Configuration file for the variant-calling workflow.
+# This workflow produces VCF files that can be used as input for the mutation feature pipeline.
+
+samples_file: config/samples.tsv
+
+genome: resources/genome/hg38.fa
+
+fastq_dir: results/01_fastq_files
+bam_dir: results/02_bam_files
+dedup_bam_dir: results/03_bam_deduplicated_files
+vcf_dir: results/04_called_variants
+
+bowtie_threads: 6
+samtools_threads: 6
+bcftools_threads: 4
