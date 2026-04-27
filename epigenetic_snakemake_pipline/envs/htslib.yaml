@@ -2,8 +2,4 @@ channels:
   - conda-forge
   - bioconda
 dependencies:
-  - samtools = 1.15.1
-  - bedtools = 2.29.2
-  - ucsc-bedsort
-  - bcftools = 1.15.1
-
+  - samtools=1.15.1
