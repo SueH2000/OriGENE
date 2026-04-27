@@ -1,0 +1,23 @@
+name: origene-model
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.9
+  - pip
+  - numpy=1.26
+  - pandas
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - jupyterlab
+  - notebook
+  - ipykernel
+  - h5py
+  - pyyaml
+  - pip:
+      - tensorflow==2.15.0
+      - keras==2.15.0
