@@ -1,0 +1,7 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - sra-tools>=3.0.10
+  - pigz
+  - gzip
