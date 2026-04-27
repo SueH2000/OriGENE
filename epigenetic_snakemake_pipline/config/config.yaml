@@ -1,2 +1,23 @@
-samples: 'config/samples.tsv'
-genome: 'resources/genome/hg38.fa'
+# Reference genome FASTA used by Bowtie2 and downstream coordinate-based processing.
+genome: "resources/genome/hg38.fa"
+
+# Sample table. Required columns:
+# sample, input_type, read1, read2
+samples_file: "config/samples.tsv"
+
+# Input locations
+input_dir: "data"
+
+# Output directories.
+fastq_dir: "results/01_fastq_files"
+sorted_bam_dir: "results/02_bam_sorted_files"
+dedup_bam_dir: "results/03_bam_deduplicated_files"
+bedgraph_dir: "results/04_bedgraph_files"
+sorted_bedgraph_dir: "results/05_bedgraph_sorted_files"
+
+# Threads.
+bowtie_threads: 6
+samtools_threads: 6
+
+# Keep true to replicate the historical OriGENE epigenetic workflow.
+remove_duplicates: true
