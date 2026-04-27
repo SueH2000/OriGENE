@@ -1,0 +1,17 @@
+# Data (must exclude)
+data/
+results/
+*.bam
+*.bai
+*.vcf
+*.npy
+
+# Python
+__pycache__/
+*.pyc
+
+# Snakemake
+.snakemake/
+
+# Jupyter
+.ipynb_checkpoints/
