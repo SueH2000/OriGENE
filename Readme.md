@@ -122,6 +122,7 @@ chr1  10029  10031  4
 **Data sources:**
 - Chen K et al. 2015 (GSE67471) — H3K4me3 in cancer vs normal pairs: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE67471
 - ENCODE NT2-D1 (GSE31755) — multi-marker reference: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE31755
+- Li Q et al. 2021 (GSE156613) — enhancer landscape in colorectal cancer subgroups (H3K27ac/H3K4me3 ChIP-seq, tumor vs native tissues): https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE156613
 
 ### 2. Mutation feature pipeline (`mutation_feature_pipeline/`)
 
