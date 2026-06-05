@@ -1,0 +1,754 @@
+Gene Name	Label	Location	Source of Information	Strand
+A1CF	oncogene	chr10:50806561-50885627	Cancer Gene Census	-
+ABI1	TSG, fusion	chr10:26746894-26860986	Cancer Gene Census	-
+ABL1	oncogene, fusion	chr9:130835253-130887675	Cancer Gene Census	+
+ABL2	oncogene, fusion	chr1:179099329-179143076	Cancer Gene Census	-
+ACKR3	oncogene, fusion	chr2:236569824-236582354	Cancer Gene Census	+
+ACSL3	fusion	chr2:222861035-222944639	Cancer Gene Census	+
+ACSL6	fusion	chr5:131953956-132011626	Cancer Gene Census	-
+ACVR1	oncogene	chr2:157736443-157875111	Cancer Gene Census	-
+ACVR1B	TSG	chr12:51951698-51997078	Cancer Gene Census	+
+ACVR2A	TSG	chr2:147845028-147930822	Cancer Gene Census	+
+AFDN	oncogene, fusion	chr6:167826960-167962661	Cancer Gene Census	+
+AFF1	fusion	chr4:87006987-87141038	Cancer Gene Census	+
+AFF3	oncogene, fusion	chr2:99547255-100142575	Cancer Gene Census	-
+AFF4	oncogene, fusion	chr5:132875394-132963634	Cancer Gene Census	-
+AKAP9	fusion	chr7:91940861-92110673	Cancer Gene Census	+
+AKT1	oncogene	chr14:104769348-104795751	Cancer Gene Census	-
+AKT2	oncogene	chr19:40233840-40265312	Cancer Gene Census	-
+AKT3	oncogene	chr1:243505248-243851079	Cancer Gene Census	-
+ALDH2	fusion	chr12:111766932-111817532	Cancer Gene Census	+
+ALK	oncogene, fusion	chr2:29192773-29921586	Cancer Gene Census	-
+AMER1	TSG	chrX:64185116-64205708	Cancer Gene Census	-
+ANK1		chr8:41653224-41896741	Cancer Gene Census	-
+APC	TSG	chr5:112737884-112846239	Cancer Gene Census	+
+APOBEC3B	oncogene, TSG	chr22:38982346-38992779	Cancer Gene Census	+
+AR	oncogene	chrX:67544020-67730619	Cancer Gene Census	+
+ARAF	oncogene	chrX:47561221-47565975	Cancer Gene Census	+
+ARHGAP26	TSG, fusion	chr5:142770376-143229011	Cancer Gene Census	+
+ARHGAP35	TSG	chr19:46937319-47001425	Cancer Gene Census	+
+ARHGAP5	oncogene	chr14:32154009-32157216	Cancer Gene Census	+
+ARHGEF10	TSG	chr8:1823925-1958641	Cancer Gene Census	+
+ARHGEF10L	TSG	chr1:17626006-17697868	Cancer Gene Census	+
+ARHGEF12	TSG, fusion	chr11:120336913-120487060	Cancer Gene Census	+
+ARID1A	TSG, fusion	chr1:26696014-26782104	Cancer Gene Census	+
+ARID1B	TSG	chr6:156901375-157186620	Cancer Gene Census	+
+ARID2	TSG	chr12:45729705-45908037	Cancer Gene Census	+
+ARNT	oncogene, TSG, fusion	chr1:150810858-150876579	Cancer Gene Census	-
+ASPM		chr1:197084127-197146694	Cancer Gene Census	-
+ASPSCR1	fusion	chr17:81977549-82017404	Cancer Gene Census	+
+ASXL1	TSG	chr20:32359746-32439318	Cancer Gene Census	+
+ASXL2	TSG	chr2:25737691-25878466	Cancer Gene Census	-
+ATF1	oncogene, fusion	chr12:50764100-50821162	Cancer Gene Census	+
+ATIC	fusion	chr2:215312058-215349764	Cancer Gene Census	+
+ATM	TSG	chr11:108223410-108367264	Cancer Gene Census	+
+ATP1A1	oncogene, TSG	chr1:116373243-116404774	Cancer Gene Census	+
+ATP2B3	TSG	chrX:153517641-153582929	Cancer Gene Census	+
+ATR	TSG	chr3:142449234-142578733	Cancer Gene Census	-
+ATRX	TSG	chrX:77504879-77786216	Cancer Gene Census	-
+AXIN1	TSG	chr16:287439-352723	Cancer Gene Census	-
+AXIN2	TSG	chr17:65528562-65561648	Cancer Gene Census	-
+B2M	TSG	chr15:44711516-44718067	Cancer Gene Census	+
+BAP1	TSG	chr3:52401025-52409914	Cancer Gene Census	-
+BARD1	TSG	chr2:214725645-214809683	Cancer Gene Census	-
+BAX	TSG	chr19:48954928-48961798	Cancer Gene Census	+
+BAZ1A	TSG	chr14:34752730-34875647	Cancer Gene Census	-
+BCL10	TSG, fusion	chr1:85266940-85276456	Cancer Gene Census	-
+BCL11A	oncogene, fusion	chr2:60457678-60553658	Cancer Gene Census	-
+BCL11B	oncogene, TSG, fusion	chr14:99169286-99271485	Cancer Gene Census	-
+BCL2	oncogene, fusion	chr18:63123345-63319769	Cancer Gene Census	-
+BCL2L12	oncogene	chr19:49665932-49673916	Cancer Gene Census	+
+BCL3	oncogene, fusion	chr19:44748707-44760044	Cancer Gene Census	+
+BCL6	oncogene, fusion	chr3:187722397-187736569	Cancer Gene Census	-
+BCL7A	fusion	chr12:122021883-122062044	Cancer Gene Census	+
+BCL9	oncogene, fusion	chr1:147541500-147626216	Cancer Gene Census	+
+BCL9L	oncogene, TSG	chr11:118893874-118910904	Cancer Gene Census	-
+BCLAF1		chr6:136256862-136289851	Cancer Gene Census	-
+BCOR	TSG, fusion	chrX:40051247-40177329	Cancer Gene Census	-
+BCORL1	oncogene, TSG	chrX:129982609-130057663	Cancer Gene Census	+
+BCR	fusion	chr22:23180508-23318037	Cancer Gene Census	+
+BIRC3	oncogene, TSG, fusion	chr11:102317483-102339403	Cancer Gene Census	+
+BIRC6	oncogene, fusion	chr2:32357022-32618878	Cancer Gene Census	+
+BLM	TSG	chr15:90717345-90816166	Cancer Gene Census	+
+BMP5		chr6:55753652-55875590	Cancer Gene Census	-
+BMPR1A	oncogene, TSG	chr10:86756618-86927969	Cancer Gene Census	+
+BRAF	oncogene, fusion	chr7:140734485-140924732	Cancer Gene Census	-
+BRCA1	TSG	chr17:43044294-43125370	Cancer Gene Census	-
+BRCA2	TSG	chr13:32315507-32400268	Cancer Gene Census	+
+BRD3	oncogene, fusion	chr9:134030304-134068026	Cancer Gene Census	-
+BRD4	oncogene, fusion	chr19:15235518-15280451	Cancer Gene Census	-
+BRIP1	TSG	chr17:61679138-61863528	Cancer Gene Census	-
+BTG1	TSG, fusion	chr12:92140277-92145846	Cancer Gene Census	-
+BTG2	TSG	chr1:203305518-203309602	Cancer Gene Census	+
+BTK	oncogene, TSG	chrX:101349449-101386191	Cancer Gene Census	-
+BUB1B	TSG	chr15:40161068-40221123	Cancer Gene Census	+
+C15orf65	fusion		Cancer Gene Census	
+CACNA1D	oncogene	chr3:53494610-53813733	Cancer Gene Census	+
+CALR	oncogene	chr19:12938608-12944489	Cancer Gene Census	+
+CAMTA1	TSG, fusion	chr1:6785453-7769706	Cancer Gene Census	+
+CANT1	fusion	chr17:78991716-79009817	Cancer Gene Census	-
+CARD11	oncogene	chr7:2919479-2930060	Cancer Gene Census	-
+CARS	TSG, fusion		Cancer Gene Census	
+CASP3	TSG	chr4:184627695-184649447	Cancer Gene Census	-
+CASP8	TSG	chr2:201233465-201286729	Cancer Gene Census	+
+CASP9	TSG	chr1:15491400-15524215	Cancer Gene Census	-
+CBFA2T3	TSG, fusion	chr16:88874857-88977207	Cancer Gene Census	-
+CBFB	TSG, fusion	chr16:67029148-67101058	Cancer Gene Census	+
+CBL	oncogene, TSG, fusion	chr11:119206338-119308149	Cancer Gene Census	+
+CBLB	TSG	chr3:105655460-105869012	Cancer Gene Census	-
+CBLC		chr19:44777868-44800634	Cancer Gene Census	+
+CCDC6	TSG, fusion	chr10:59788746-59906556	Cancer Gene Census	-
+CCNB1IP1	TSG, fusion	chr14:20311367-20333312	Cancer Gene Census	-
+CCNC	TSG	chr6:99542386-99568631	Cancer Gene Census	-
+CCND1	oncogene, fusion	chr11:69641155-69654474	Cancer Gene Census	+
+CCND2	oncogene, fusion	chr12:4273761-4305353	Cancer Gene Census	+
+CCND3	oncogene, fusion	chr6:41934955-41941519	Cancer Gene Census	-
+CCNE1	oncogene	chr19:29811990-29824312	Cancer Gene Census	+
+CCR4	oncogene	chr3:32951643-32956349	Cancer Gene Census	+
+CCR7	oncogene	chr17:40553768-40565472	Cancer Gene Census	-
+CD209		chr19:7743038-7747511	Cancer Gene Census	-
+CD274	TSG, fusion	chr9:5450502-5470566	Cancer Gene Census	+
+CD28	oncogene	chr2:203706638-203738912	Cancer Gene Census	+
+CD74	oncogene, fusion	chr5:150401638-150412910	Cancer Gene Census	-
+CD79A	oncogene	chr19:41877278-41881372	Cancer Gene Census	+
+CD79B	oncogene	chr17:63928739-63932331	Cancer Gene Census	-
+CDC73	TSG	chr1:193122030-193254815	Cancer Gene Census	+
+CDH1	TSG	chr16:68737291-68835537	Cancer Gene Census	+
+CDH10	TSG	chr5:24487099-24644978	Cancer Gene Census	-
+CDH11	TSG, fusion	chr16:64943752-65122063	Cancer Gene Census	-
+CDH17	oncogene	chr8:94127161-94208555	Cancer Gene Census	-
+CDK12	TSG	chr17:39461760-39532477	Cancer Gene Census	+
+CDK4	oncogene	chr12:57747726-57752310	Cancer Gene Census	-
+CDK6	oncogene, fusion	chr7:92604920-92833917	Cancer Gene Census	-
+CDKN1A	oncogene, TSG	chr6:36678713-36687332	Cancer Gene Census	+
+CDKN1B	TSG	chr12:12717367-12722369	Cancer Gene Census	+
+CDKN2A	TSG	chr9:21967751-21974857	Cancer Gene Census	-
+CDKN2C	TSG	chr1:50960744-50974633	Cancer Gene Census	+
+CDX2	TSG, fusion	chr13:27960917-27969315	Cancer Gene Census	-
+CEBPA	TSG	chr19:33299933-33302534	Cancer Gene Census	-
+CEP89	fusion	chr19:32875924-32971958	Cancer Gene Census	-
+CHCHD7	fusion	chr8:56211755-56218615	Cancer Gene Census	+
+CHD2	TSG	chr15:92900323-93027996	Cancer Gene Census	+
+CHD4	oncogene	chr12:6570081-6607356	Cancer Gene Census	-
+CHEK2	TSG	chr22:28687742-28741834	Cancer Gene Census	-
+CHIC2	fusion	chr4:54009788-54064605	Cancer Gene Census	-
+CHST11	oncogene, fusion	chr12:104456947-104762014	Cancer Gene Census	+
+CIC	oncogene, TSG, fusion	chr19:42284019-42295796	Cancer Gene Census	+
+CIITA	TSG, fusion	chr16:10877201-10936394	Cancer Gene Census	+
+CLIP1	fusion	chr12:122271433-122380560	Cancer Gene Census	-
+CLP1	fusion	chr11:57657762-57661864	Cancer Gene Census	+
+CLTC	TSG, fusion	chr17:59619894-59696956	Cancer Gene Census	+
+CLTCL1	TSG, fusion	chr22:19179475-19184831	Cancer Gene Census	-
+CNBD1		chr8:86866441-86939816	Cancer Gene Census	+
+CNBP	TSG, fusion	chr3:129167826-129183896	Cancer Gene Census	-
+CNOT3	TSG	chr19:54137761-54155681	Cancer Gene Census	+
+CNTNAP2	TSG	chr7:146116800-148420998	Cancer Gene Census	+
+CNTRL	fusion	chr9:121152042-121177610	Cancer Gene Census	+
+COL1A1	fusion	chr17:50184100-50201631	Cancer Gene Census	-
+COL2A1	fusion	chr12:47973406-48004506	Cancer Gene Census	-
+COL3A1	fusion	chr2:188974372-189012746	Cancer Gene Census	+
+COX6C	fusion	chr8:99878147-99893684	Cancer Gene Census	-
+CPEB3	TSG	chr10:92046691-92291078	Cancer Gene Census	-
+CREB1	oncogene, fusion	chr2:207529961-207605988	Cancer Gene Census	+
+CREB3L1	TSG, fusion	chr11:46310913-46312623	Cancer Gene Census	+
+CREB3L2	oncogene, fusion	chr7:137874978-138002086	Cancer Gene Census	-
+CREBBP	oncogene, TSG, fusion	chr16:3725053-3880713	Cancer Gene Census	-
+CRLF2	oncogene, fusion	chrX:1190896-1212634	Cancer Gene Census	-
+CRNKL1		chr20:20034367-20056046	Cancer Gene Census	-
+CRTC1	oncogene, fusion	chr19:18683679-18782333	Cancer Gene Census	+
+CRTC3	fusion	chr15:90529922-90645345	Cancer Gene Census	+
+CSF1R	oncogene	chr5:150053290-150113372	Cancer Gene Census	-
+CSF3R	oncogene	chr1:36466042-36483278	Cancer Gene Census	-
+CSMD3	TSG	chr8:112222927-113436939	Cancer Gene Census	-
+CTCF	TSG	chr16:67562525-67639177	Cancer Gene Census	+
+CTNNA1	TSG, fusion	chr5:138753424-138935034	Cancer Gene Census	+
+CTNNA2	oncogene	chr2:80313378-80648861	Cancer Gene Census	+
+CTNNB1	oncogene, fusion	chr3:41199504-41240443	Cancer Gene Census	+
+CTNND1		chr11:57761796-57819178	Cancer Gene Census	+
+CTNND2	oncogene	chr5:10971835-11904446	Cancer Gene Census	-
+CUL3	TSG	chr2:224470149-224585363	Cancer Gene Census	-
+CUX1	oncogene, TSG	chr7:101817625-102258233	Cancer Gene Census	+
+CXCR4	oncogene	chr2:136114348-136118149	Cancer Gene Census	-
+CYLD	TSG	chr16:50742073-50798617	Cancer Gene Census	+
+CYP2C8		chr10:95036771-95069497	Cancer Gene Census	-
+CYSLTR2	oncogene	chr13:48706554-48711226	Cancer Gene Census	+
+DAXX	oncogene, TSG	chr6:33318557-33323010	Cancer Gene Census	-
+DCAF12L2		chrX:126163498-126166289	Cancer Gene Census	-
+DCC		chr18:52752161-53416557	Cancer Gene Census	+
+DCTN1	fusion	chr2:74361153-74380355	Cancer Gene Census	-
+DDB2	oncogene, TSG	chr11:47214973-47239217	Cancer Gene Census	+
+DDIT3	oncogene, fusion	chr12:57516592-57520514	Cancer Gene Census	-
+DDR2	oncogene	chr1:162632463-162787405	Cancer Gene Census	+
+DDX10	TSG, fusion	chr11:108665068-108940927	Cancer Gene Census	+
+DDX3X	TSG	chrX:41334161-41350274	Cancer Gene Census	+
+DDX5	oncogene, fusion	chr17:64498253-64506289	Cancer Gene Census	-
+DDX6	oncogene, fusion	chr11:118767626-118791136	Cancer Gene Census	-
+DEK	oncogene, fusion	chr6:18225469-18264541	Cancer Gene Census	-
+DGCR8	oncogene	chr22:20080240-20111872	Cancer Gene Census	+
+DICER1	TSG	chr14:95086227-95157529	Cancer Gene Census	-
+DNAJB1	fusion	chr19:14514768-14518397	Cancer Gene Census	-
+DNM2	TSG	chr19:10718078-10831903	Cancer Gene Census	+
+DNMT3A	TSG	chr2:25227854-25342590	Cancer Gene Census	-
+DROSHA	TSG	chr5:31400493-31532093	Cancer Gene Census	-
+EBF1	TSG, fusion	chr5:158695919-159099916	Cancer Gene Census	-
+ECT2L		chr6:138796110-138904070	Cancer Gene Census	+
+EED	TSG	chr11:86244752-86278810	Cancer Gene Census	+
+EGFR	oncogene	chr7:55019016-55211628	Cancer Gene Census	+
+EIF1AX		chrX:20128077-20141826	Cancer Gene Census	-
+EIF3E	TSG, fusion	chr8:108201215-108248717	Cancer Gene Census	-
+EIF4A2	fusion	chr3:186783576-186789897	Cancer Gene Census	+
+ELF3	TSG	chr1:202007944-202016009	Cancer Gene Census	+
+ELF4	oncogene, TSG, fusion	chrX:130063954-130110497	Cancer Gene Census	-
+ELK4	oncogene, fusion	chr1:205619267-205631962	Cancer Gene Census	-
+ELL	TSG, fusion	chr19:18442662-18522070	Cancer Gene Census	-
+ELN	fusion	chr7:74028172-74069907	Cancer Gene Census	+
+EML4	fusion	chr2:42169352-42332548	Cancer Gene Census	+
+EP300	TSG, fusion	chr22:41092591-41180077	Cancer Gene Census	+
+EPAS1	oncogene, TSG	chr2:46297406-46386697	Cancer Gene Census	+
+EPHA3		chr3:89107620-89482134	Cancer Gene Census	+
+EPHA7		chr6:93409653-93419547	Cancer Gene Census	-
+EPS15	TSG, fusion	chr1:51457535-51519245	Cancer Gene Census	-
+ERBB2	oncogene, fusion	chr17:39700063-39728658	Cancer Gene Census	+
+ERBB3	oncogene	chr12:56080164-56103505	Cancer Gene Census	+
+ERBB4	oncogene, TSG	chr2:211383270-212538530	Cancer Gene Census	-
+ERC1	fusion	chr12:991237-1491567	Cancer Gene Census	+
+ERCC2	TSG	chr19:45352208-45370918	Cancer Gene Census	-
+ERCC3	TSG	chr2:127257289-127294144	Cancer Gene Census	-
+ERCC4	TSG	chr16:13920153-13952348	Cancer Gene Census	+
+ERCC5	TSG	chr13:102864717-102875983	Cancer Gene Census	+
+ERG	oncogene, fusion	chr21:38380035-38498477	Cancer Gene Census	-
+ESR1	oncogene, TSG, fusion	chr6:151807681-152103274	Cancer Gene Census	+
+ETNK1	TSG	chr12:22625170-22690665	Cancer Gene Census	+
+ETV1	oncogene, fusion	chr7:13894186-13989666	Cancer Gene Census	-
+ETV4	oncogene, fusion	chr17:43527845-43546340	Cancer Gene Census	-
+ETV5	oncogene, fusion	chr3:186046313-186109089	Cancer Gene Census	-
+ETV6	TSG, fusion	chr12:11885936-11891610	Cancer Gene Census	+
+EWSR1	oncogene, fusion	chr22:29268290-29300525	Cancer Gene Census	+
+EXT1	TSG, fusion	chr8:117794489-118111826	Cancer Gene Census	-
+EXT2	TSG	chr11:44095822-44245425	Cancer Gene Census	+
+EZH2	oncogene, TSG	chr7:148807382-148884291	Cancer Gene Census	-
+EZR	fusion	chr6:158765740-158818227	Cancer Gene Census	-
+FADD		chr11:70203295-70207390	Cancer Gene Census	+
+FAM131B	fusion	chr7:143353821-143362055	Cancer Gene Census	-
+FAM135B		chr8:138250923-138425515	Cancer Gene Census	-
+FAM47C		chrX:37008365-37011664	Cancer Gene Census	+
+FANCA	TSG	chr16:89739740-89765039	Cancer Gene Census	-
+FANCC	TSG	chr9:95099053-95317709	Cancer Gene Census	-
+FANCD2	TSG	chr3:10026413-10099660	Cancer Gene Census	+
+FANCE	TSG	chr6:35452337-35467102	Cancer Gene Census	+
+FANCF	TSG	chr11:22622532-22625823	Cancer Gene Census	-
+FANCG	TSG	chr9:35073838-35079942	Cancer Gene Census	-
+FAS	TSG	chr10:88991287-89015749	Cancer Gene Census	+
+FAT1	TSG	chr4:186587793-186723856	Cancer Gene Census	-
+FAT3		chr11:92352095-92896452	Cancer Gene Census	+
+FAT4	TSG	chr4:125393935-125491768	Cancer Gene Census	+
+FBLN2	TSG	chr3:13549180-13638422	Cancer Gene Census	+
+FBXO11	TSG	chr2:47806919-47888719	Cancer Gene Census	-
+FBXW7	TSG	chr4:152320543-152536092	Cancer Gene Census	-
+FCGR2B	oncogene, fusion	chr1:161663146-161678022	Cancer Gene Census	+
+FCRL4	oncogene, fusion	chr1:157573746-157598085	Cancer Gene Census	-
+FEN1	TSG	chr11:61792910-61797238	Cancer Gene Census	+
+FES	oncogene, TSG	chr15:90884503-90895776	Cancer Gene Census	+
+FEV	oncogene, fusion	chr2:218981086-218985184	Cancer Gene Census	-
+FGFR1	oncogene, fusion	chr8:38412731-38468616	Cancer Gene Census	-
+FGFR1OP	fusion		Cancer Gene Census	
+FGFR2	oncogene, fusion	chr10:121483717-121598396	Cancer Gene Census	-
+FGFR3	oncogene, fusion	chr4:1793311-1807275	Cancer Gene Census	+
+FGFR4	oncogene	chr5:177086914-177098144	Cancer Gene Census	+
+FH	TSG	chr1:241497602-241519755	Cancer Gene Census	-
+FHIT	TSG, fusion	chr3:61244009-61251412	Cancer Gene Census	-
+FIP1L1	fusion	chr4:53377695-53459621	Cancer Gene Census	+
+FKBP9		chr7:32957439-33006928	Cancer Gene Census	+
+FLCN	TSG	chr17:17212211-17237168	Cancer Gene Census	-
+FLI1	oncogene, fusion	chr11:128693915-128813266	Cancer Gene Census	+
+FLNA		chrX:154348528-154371283	Cancer Gene Census	-
+FLT3	oncogene	chr13:28003273-28100576	Cancer Gene Census	-
+FLT4	oncogene	chr5:180601505-180649600	Cancer Gene Census	-
+FNBP1	fusion	chr9:129895811-130043167	Cancer Gene Census	-
+FOXA1	oncogene	chr14:37589551-37595249	Cancer Gene Census	-
+FOXL2	oncogene, TSG	chr3:138944223-138947137	Cancer Gene Census	-
+FOXO1	oncogene, TSG, fusion	chr13:40555666-40666641	Cancer Gene Census	-
+FOXO3	oncogene, TSG, fusion	chr6:108559834-108684774	Cancer Gene Census	+
+FOXO4	oncogene, TSG, fusion	chrX:71096528-71103535	Cancer Gene Census	+
+FOXP1	oncogene, fusion	chr3:71197881-71583939	Cancer Gene Census	-
+FOXR1	oncogene, fusion	chr11:118971760-118981287	Cancer Gene Census	+
+FSTL3	oncogene, fusion	chr19:676391-683385	Cancer Gene Census	+
+FUBP1	oncogene	chr1:77946481-77979087	Cancer Gene Census	-
+FUS	TSG, fusion	chr16:31180138-31191605	Cancer Gene Census	+
+GAS7	fusion	chr17:9910608-10114553	Cancer Gene Census	-
+GATA1	oncogene, TSG	chrX:48786572-48794311	Cancer Gene Census	+
+GATA2	oncogene	chr3:128479426-128493201	Cancer Gene Census	-
+GATA3	oncogene, TSG	chr10:8054809-8074890	Cancer Gene Census	+
+GLI1	oncogene, fusion	chr12:57459784-57472268	Cancer Gene Census	+
+GMPS	fusion	chr3:155870649-155937710	Cancer Gene Census	+
+GNA11	oncogene	chr19:3094361-3123999	Cancer Gene Census	+
+GNAQ	oncogene	chr9:77716096-78031811	Cancer Gene Census	-
+GNAS	oncogene	chr20:58891363-58911192	Cancer Gene Census	+
+GOLGA5	fusion	chr14:92794304-92839947	Cancer Gene Census	+
+GOLPH3		chr5:32124715-32174319	Cancer Gene Census	-
+GOPC	fusion	chr6:117560268-117602528	Cancer Gene Census	-
+GPC3	oncogene, TSG	chrX:133535744-133985594	Cancer Gene Census	-
+GPC5	TSG	chr13:91398620-92867237	Cancer Gene Census	+
+GPHN	fusion	chr14:66507406-67181798	Cancer Gene Census	+
+GRIN2A	TSG	chr16:9753407-10182428	Cancer Gene Census	-
+GRM3	oncogene	chr7:86643908-86864879	Cancer Gene Census	+
+GSK3B		chr3:119821320-120094447	Cancer Gene Census	-
+GTF2I		chr7:74684656-74699041	Cancer Gene Census	+
+H3F3A	oncogene		Cancer Gene Census	
+H3F3B	oncogene		Cancer Gene Census	
+HERPUD1	fusion	chr16:56932146-56943881	Cancer Gene Census	+
+HEY1	oncogene, fusion	chr8:79764012-79767857	Cancer Gene Census	-
+HGF	oncogene, fusion	chr7:81699009-81770047	Cancer Gene Census	-
+HIF1A	oncogene	chr14:61695776-61748258	Cancer Gene Census	+
+HIP1	oncogene, fusion	chr7:75533297-75738941	Cancer Gene Census	-
+HIST1H3B	oncogene		Cancer Gene Census	
+HIST1H4I	fusion		Cancer Gene Census	
+HLA-A	fusion	chr6:29942548-29945884	Cancer Gene Census	+
+HLF	oncogene, fusion	chr17:55264959-55325187	Cancer Gene Census	+
+HMGA1	oncogene, fusion	chr6:34236872-34246231	Cancer Gene Census	+
+HMGA2	oncogene, fusion	chr12:65824459-65915527	Cancer Gene Census	+
+HMGN2P46	fusion	chr15:45555481-45555971	Cancer Gene Census	+
+HNF1A	TSG	chr12:120978542-121002512	Cancer Gene Census	+
+HNRNPA2B1	oncogene, fusion	chr7:26189926-26200746	Cancer Gene Census	-
+HOOK3	fusion	chr8:42896977-43030535	Cancer Gene Census	+
+HOXA11	oncogene, TSG, fusion	chr7:27181156-27185232	Cancer Gene Census	-
+HOXA13	oncogene, fusion	chr7:27193502-27195600	Cancer Gene Census	-
+HOXA9	oncogene, TSG, fusion	chr7:27162437-27165537	Cancer Gene Census	-
+HOXC11	oncogene, fusion	chr12:53973127-53976419	Cancer Gene Census	+
+HOXC13	oncogene, fusion	chr12:53938830-53946544	Cancer Gene Census	+
+HOXD11	oncogene, fusion	chr2:176107279-176109754	Cancer Gene Census	+
+HOXD13	oncogene, fusion	chr2:176092720-176095944	Cancer Gene Census	+
+HRAS	oncogene	chr11:532241-535576	Cancer Gene Census	-
+HSP90AA1	fusion	chr14:102080741-102087044	Cancer Gene Census	-
+HSP90AB1	fusion	chr6:44247086-44253883	Cancer Gene Census	+
+ID3	TSG	chr1:23557925-23559501	Cancer Gene Census	-
+IDH1	oncogene	chr2:208236228-208255071	Cancer Gene Census	-
+IDH2	oncogene	chr15:90083044-90102468	Cancer Gene Census	-
+IGF2BP2	TSG	chr3:185643974-185825024	Cancer Gene Census	-
+IGH	fusion		Cancer Gene Census	
+IGK	fusion		Cancer Gene Census	
+IGL	fusion		Cancer Gene Census	
+IKBKB	oncogene	chr8:42271333-42332450	Cancer Gene Census	+
+IKZF1	TSG, fusion	chr7:50304715-50405101	Cancer Gene Census	+
+IKZF3	oncogene, TSG, fusion	chr17:39765283-39864188	Cancer Gene Census	-
+IL2	fusion	chr4:122451469-122456725	Cancer Gene Census	-
+IL21R	fusion	chr16:27402173-27452042	Cancer Gene Census	+
+IL6ST	oncogene	chr5:55941764-55976278	Cancer Gene Census	-
+IL7R	oncogene	chr5:35856890-35879603	Cancer Gene Census	+
+IRF4	oncogene, TSG, fusion	chr6:391751-411443	Cancer Gene Census	+
+IRS4	oncogene, TSG	chrX:108719945-108736563	Cancer Gene Census	-
+ISX		chr22:35066135-35087387	Cancer Gene Census	+
+ITGAV		chr2:186590055-186680901	Cancer Gene Census	+
+ITK	fusion	chr5:157180839-157255185	Cancer Gene Census	+
+JAK1	oncogene, TSG	chr1:64833228-64966549	Cancer Gene Census	-
+JAK2	oncogene, fusion	chr9:4985271-5129948	Cancer Gene Census	+
+JAK3	oncogene	chr19:17824781-17847982	Cancer Gene Census	-
+JAZF1	fusion	chr7:27830576-28180795	Cancer Gene Census	-
+JUN	oncogene	chr1:58780790-58784047	Cancer Gene Census	-
+KAT6A	oncogene, fusion	chr8:41929478-42051987	Cancer Gene Census	-
+KAT6B	TSG, fusion	chr10:74826599-75032624	Cancer Gene Census	+
+KAT7	oncogene	chr17:49788680-49835026	Cancer Gene Census	+
+KCNJ5	oncogene	chr11:128891468-128916853	Cancer Gene Census	+
+KDM5A	oncogene, fusion	chr12:280056-389320	Cancer Gene Census	-
+KDM5C	TSG	chrX:53221704-53225198	Cancer Gene Census	-
+KDM6A	oncogene, TSG	chrX:44873187-45112602	Cancer Gene Census	+
+KDR	oncogene	chr4:55078480-55125595	Cancer Gene Census	-
+KDSR	fusion	chr18:63331650-63367204	Cancer Gene Census	-
+KEAP1	TSG	chr19:10486124-10503356	Cancer Gene Census	-
+KIAA1549	fusion	chr7:138831380-138981389	Cancer Gene Census	-
+KIF5B	fusion	chr10:32009014-32056425	Cancer Gene Census	-
+KIT	oncogene	chr4:54657956-54740715	Cancer Gene Census	+
+KLF4	oncogene, TSG	chr9:107484851-107489769	Cancer Gene Census	-
+KLF6	TSG	chr10:3779046-3782051	Cancer Gene Census	-
+KLK2	fusion	chr19:50873438-50880567	Cancer Gene Census	+
+KMT2A	oncogene, fusion	chr11:118436489-118523917	Cancer Gene Census	+
+KMT2C	TSG	chr7:152134924-152436003	Cancer Gene Census	-
+KMT2D	oncogene, TSG	chr12:49018977-49060794	Cancer Gene Census	-
+KNL1	TSG, fusion	chr15:40594019-40664342	Cancer Gene Census	+
+KNSTRN	oncogene	chr15:40382720-40394288	Cancer Gene Census	+
+KRAS	oncogene	chr12:25205245-25250929	Cancer Gene Census	-
+KTN1	fusion	chr14:55667650-55684583	Cancer Gene Census	+
+LARP4B	TSG	chr10:809496-931705	Cancer Gene Census	-
+LASP1	fusion	chr17:38870057-38921770	Cancer Gene Census	+
+LATS1	TSG	chr6:149661093-149702354	Cancer Gene Census	-
+LATS2	TSG	chr13:20973035-21061586	Cancer Gene Census	-
+LCK	oncogene, fusion	chr1:32274131-32286162	Cancer Gene Census	+
+LCP1	fusion	chr13:46125922-46182177	Cancer Gene Census	-
+LEF1	oncogene, TSG	chr4:108047547-108168932	Cancer Gene Census	-
+LEPROTL1	TSG	chr8:30095407-30108524	Cancer Gene Census	+
+LHFPL6	fusion	chr13:39342891-39603193	Cancer Gene Census	-
+LIFR	fusion	chr5:38474962-38595404	Cancer Gene Census	-
+LMNA	fusion	chr1:156114250-156139293	Cancer Gene Census	+
+LMO1	oncogene, fusion	chr11:8224308-8263878	Cancer Gene Census	-
+LMO2	oncogene, fusion	chr11:33858575-33892076	Cancer Gene Census	-
+LPP	oncogene, fusion	chr3:188153897-188890671	Cancer Gene Census	+
+LRIG3	TSG, fusion	chr12:58872154-58920504	Cancer Gene Census	-
+LRP1B	TSG	chr2:140231422-142131016	Cancer Gene Census	-
+LSM14A	fusion	chr19:34172567-34229288	Cancer Gene Census	+
+LYL1	oncogene, fusion	chr19:13099032-13102858	Cancer Gene Census	-
+LYN	oncogene, fusion	chr8:55955095-55998448	Cancer Gene Census	+
+LZTR1	TSG	chr22:20982268-20991685	Cancer Gene Census	+
+MACC1	oncogene	chr7:20140624-20217404	Cancer Gene Census	-
+MAF	oncogene, fusion	chr16:79593837-79600737	Cancer Gene Census	-
+MAFB	oncogene, fusion	chr20:40685847-40689236	Cancer Gene Census	-
+MALAT1	oncogene, TSG, fusion	chr11:65499041-65505452	Cancer Gene Census	+
+MALT1	oncogene, fusion	chr18:58671531-58748154	Cancer Gene Census	+
+MAML2	oncogene, fusion	chr11:95976597-96343195	Cancer Gene Census	-
+MAP2K1	oncogene	chr15:66386911-66491544	Cancer Gene Census	+
+MAP2K2	oncogene	chr19:4090320-4124122	Cancer Gene Census	-
+MAP2K4	oncogene, TSG	chr17:12020876-12143828	Cancer Gene Census	+
+MAP3K1	oncogene, TSG	chr5:56815548-56896152	Cancer Gene Census	+
+MAP3K13	oncogene, TSG	chr3:185363135-185489094	Cancer Gene Census	+
+MAPK1	oncogene	chr22:21759656-21867645	Cancer Gene Census	-
+MAX	TSG	chr14:65083743-65102509	Cancer Gene Census	-
+MB21D2		chr3:192796814-192917856	Cancer Gene Census	-
+MDM2	oncogene	chr12:68808463-68839867	Cancer Gene Census	+
+MDM4	oncogene	chr1:204537856-204549194	Cancer Gene Census	+
+MDS2	fusion	chr1:23627333-23640568	Cancer Gene Census	+
+MECOM	oncogene, fusion	chr3:169083498-169146305	Cancer Gene Census	-
+MED12	TSG	chrX:71118595-71142442	Cancer Gene Census	+
+MEN1	TSG	chr11:64803515-64810686	Cancer Gene Census	-
+MET	oncogene	chr7:116672195-116798377	Cancer Gene Census	+
+MGMT	TSG	chr10:129467189-129767519	Cancer Gene Census	+
+MITF	oncogene	chr3:69936586-69965668	Cancer Gene Census	+
+MLF1	TSG, fusion	chr3:158571193-158606456	Cancer Gene Census	+
+MLH1	TSG	chr3:36993517-37050846	Cancer Gene Census	+
+MLLT1	fusion	chr19:6210380-6279975	Cancer Gene Census	-
+MLLT10	oncogene, fusion	chr10:21534231-21743630	Cancer Gene Census	+
+MLLT11	fusion	chr1:151060396-151069544	Cancer Gene Census	+
+MLLT3	fusion	chr9:20346405-20382469	Cancer Gene Census	-
+MLLT6	fusion	chr17:38706638-38707799	Cancer Gene Census	+
+MN1	oncogene, fusion	chr22:27748276-27801756	Cancer Gene Census	-
+MNX1	fusion	chr7:157004853-157010663	Cancer Gene Census	-
+MPL	oncogene	chr1:43337817-43354466	Cancer Gene Census	+
+MRTFA	oncogene, TSG, fusion	chr22:40410288-40636719	Cancer Gene Census	-
+MSH2	TSG	chr2:47403155-47483223	Cancer Gene Census	+
+MSH6	TSG	chr2:47783144-47806953	Cancer Gene Census	+
+MSI2	oncogene, fusion	chr17:57256522-57684689	Cancer Gene Census	+
+MSN	fusion	chrX:65667653-65741931	Cancer Gene Census	+
+MTCP1	oncogene, fusion	chrX:155065320-155147775	Cancer Gene Census	-
+MTOR	oncogene	chr1:11106534-11262551	Cancer Gene Census	-
+MUC1	fusion	chr1:155186122-155192868	Cancer Gene Census	-
+MUC16	oncogene	chr19:8848843-8981342	Cancer Gene Census	-
+MUC4	oncogene	chr3:195746764-195778810	Cancer Gene Census	-
+MUC6		chr11:1012822-1036718	Cancer Gene Census	-
+MUTYH	TSG	chr1:45329241-45340080	Cancer Gene Census	-
+MYB	oncogene, fusion	chr6:135181314-135219167	Cancer Gene Census	+
+MYC	oncogene, fusion	chr8:127735433-127740477	Cancer Gene Census	+
+MYCL	oncogene	chr1:39899611-39901919	Cancer Gene Census	-
+MYCN	oncogene	chr2:15940549-15947004	Cancer Gene Census	+
+MYD88	oncogene	chr3:38138650-38143017	Cancer Gene Census	+
+MYH11	fusion	chr16:15703134-15857028	Cancer Gene Census	-
+MYH9	TSG, fusion	chr22:36281279-36387967	Cancer Gene Census	-
+MYO5A	fusion	chr15:52307282-52528841	Cancer Gene Census	-
+MYOD1	oncogene	chr11:17719570-17722136	Cancer Gene Census	+
+N4BP2	TSG	chr4:40056849-40158252	Cancer Gene Census	+
+NAB2	TSG, fusion	chr12:57089113-57095476	Cancer Gene Census	+
+NACA	fusion	chr12:56712432-56727197	Cancer Gene Census	-
+NBEA		chr13:35593005-35672732	Cancer Gene Census	+
+NBN	TSG	chr8:89933330-89984667	Cancer Gene Census	-
+NCKIPSD	fusion	chr3:48673843-48685915	Cancer Gene Census	-
+NCOA1	fusion	chr2:24584476-24770702	Cancer Gene Census	+
+NCOA2	oncogene, fusion	chr8:70109781-70403808	Cancer Gene Census	-
+NCOA4	TSG, fusion	chr10:46006411-46030607	Cancer Gene Census	-
+NCOR1	TSG	chr17:16029156-16215534	Cancer Gene Census	-
+NCOR2	TSG	chr12:124324414-124535603	Cancer Gene Census	-
+NDRG1	TSG, fusion	chr8:133237174-133297252	Cancer Gene Census	-
+NF1	TSG, fusion	chr17:31094926-31377677	Cancer Gene Census	+
+NF2	TSG	chr22:29603726-29683915	Cancer Gene Census	+
+NFATC2	oncogene, fusion	chr20:51386962-51542719	Cancer Gene Census	-
+NFE2L2	oncogene, TSG	chr2:177230307-177264727	Cancer Gene Census	-
+NFIB	fusion	chr9:14305752-14313957	Cancer Gene Census	-
+NFKB2	oncogene, TSG, fusion	chr10:102395704-102402524	Cancer Gene Census	+
+NFKBIE	TSG	chr6:44258165-44265788	Cancer Gene Census	-
+NIN	fusion	chr14:50725832-50831121	Cancer Gene Census	-
+NKX2-1	oncogene, TSG	chr14:36516396-36520232	Cancer Gene Census	-
+NONO	fusion	chrX:71283634-71301168	Cancer Gene Census	+
+NOTCH1	oncogene, TSG, fusion	chr9:136522571-136523898	Cancer Gene Census	-
+NOTCH2	oncogene, TSG	chr1:119911552-120069662	Cancer Gene Census	-
+NPM1	oncogene, fusion	chr5:171387848-171410900	Cancer Gene Census	+
+NR2F2		chr15:96330699-96340258	Cancer Gene Census	+
+NR4A3	oncogene, fusion	chr9:99826726-99866891	Cancer Gene Census	+
+NRAS	oncogene	chr1:114704468-114716771	Cancer Gene Census	-
+NRG1	TSG, fusion	chr8:32548634-32764407	Cancer Gene Census	+
+NSD1	fusion	chr5:177134228-177295762	Cancer Gene Census	+
+NSD2	oncogene, fusion	chr4:1892844-1982203	Cancer Gene Census	+
+NSD3	oncogene, fusion	chr8:38316416-38382272	Cancer Gene Census	-
+NT5C2	oncogene	chr10:103088017-103193306	Cancer Gene Census	-
+NTHL1	TSG	chr16:2039814-2047866	Cancer Gene Census	-
+NTRK1	oncogene, TSG, fusion	chr1:156860893-156881711	Cancer Gene Census	+
+NTRK2	oncogene, fusion	chr9:84669728-85027054	Cancer Gene Census	+
+NTRK3	oncogene, fusion	chr15:87977363-88256739	Cancer Gene Census	-
+NUMA1	fusion	chr11:72002863-72080389	Cancer Gene Census	-
+NUP214	fusion	chr9:131125585-131234663	Cancer Gene Census	+
+NUP98	oncogene, fusion	chr11:3675018-3797554	Cancer Gene Census	-
+NUTM1	oncogene, fusion	chr15:34343314-34357737	Cancer Gene Census	+
+NUTM2B	fusion	chr10:79703278-79714681	Cancer Gene Census	+
+NUTM2D	fusion	chr10:87357743-87367195	Cancer Gene Census	+
+OLIG2	oncogene, fusion	chr21:33025934-33029196	Cancer Gene Census	+
+OMD	fusion	chr9:92412379-92424471	Cancer Gene Census	-
+P2RY8	oncogene, fusion	chrX:1462580-1537185	Cancer Gene Census	-
+PABPC1	oncogene, TSG	chr8:100702915-100722088	Cancer Gene Census	-
+PAFAH1B2	fusion	chr11:117144292-117167992	Cancer Gene Census	+
+PALB2	TSG	chr16:23603164-23641310	Cancer Gene Census	-
+PATZ1	TSG, fusion	chr22:31340676-31345776	Cancer Gene Census	-
+PAX3	oncogene, fusion	chr2:222293634-222298865	Cancer Gene Census	-
+PAX5	oncogene, TSG, fusion	chr9:36833268-37034268	Cancer Gene Census	-
+PAX7	fusion	chr1:18631005-18736138	Cancer Gene Census	+
+PAX8	fusion	chr2:113215996-113278921	Cancer Gene Census	-
+PBRM1	TSG	chr3:52547989-52679713	Cancer Gene Census	-
+PBX1	oncogene, fusion	chr1:164559406-164792738	Cancer Gene Census	+
+PCBP1		chr2:70087476-70089203	Cancer Gene Census	+
+PCM1	fusion	chr8:17922987-18029948	Cancer Gene Census	+
+PDCD1LG2	oncogene, fusion	chr9:5510530-5571282	Cancer Gene Census	+
+PDE4DIP	fusion	chr1:148952123-148993880	Cancer Gene Census	+
+PDGFB	oncogene, fusion	chr22:39223358-39244982	Cancer Gene Census	-
+PDGFRA	oncogene, fusion	chr4:54229292-54298245	Cancer Gene Census	+
+PDGFRB	oncogene, fusion	chr5:150113838-150155845	Cancer Gene Census	-
+PER1	TSG, fusion	chr17:8140471-8152404	Cancer Gene Census	-
+PHF6	TSG	chrX:134373311-134428789	Cancer Gene Census	+
+PHOX2B	TSG	chr4:41744081-41748725	Cancer Gene Census	-
+PICALM	fusion	chr11:85958986-86068780	Cancer Gene Census	-
+PIK3CA	oncogene	chr3:179148356-179240093	Cancer Gene Census	+
+PIK3CB	oncogene	chr3:138652698-138759359	Cancer Gene Census	-
+PIK3R1	TSG	chr5:68288051-68301480	Cancer Gene Census	+
+PIK3R2	oncogene	chr19:18153162-18170532	Cancer Gene Census	+
+PIK3R3		chr1:46040139-46132629	Cancer Gene Census	-
+PIM1	oncogene, fusion	chr6:37170151-37175428	Cancer Gene Census	+
+PLAG1	oncogene, fusion	chr8:56160908-56211273	Cancer Gene Census	-
+PLCG1	oncogene, fusion	chr20:41136959-41175721	Cancer Gene Census	+
+PLEC	fusion	chr8:143915152-143950876	Cancer Gene Census	-
+PML	TSG, fusion	chr15:73994715-74047827	Cancer Gene Census	+
+PMS1		chr2:189784488-189877627	Cancer Gene Census	+
+PMS2	TSG	chr7:5970924-6009049	Cancer Gene Census	-
+POLD1	TSG	chr19:50384346-50418014	Cancer Gene Census	+
+POLE	TSG	chr12:132623761-132687342	Cancer Gene Census	-
+POLG	TSG	chr15:89316319-89334824	Cancer Gene Census	-
+POLQ	oncogene, TSG	chr3:121431430-121545988	Cancer Gene Census	-
+POLR2A		chr17:7484619-7499758	Cancer Gene Census	+
+POT1	TSG	chr7:124822385-124929825	Cancer Gene Census	-
+POU2AF1	oncogene, fusion	chr11:111352254-111379275	Cancer Gene Census	-
+POU5F1	oncogene, fusion	chr6:31164336-31170682	Cancer Gene Census	-
+PPARG	TSG, fusion	chr3:12351471-12434356	Cancer Gene Census	+
+PPFIBP1	fusion	chr12:27524205-27695564	Cancer Gene Census	+
+PPM1D	oncogene	chr17:60600192-60666280	Cancer Gene Census	+
+PPP2R1A	TSG	chr19:52190051-52229518	Cancer Gene Census	+
+PPP6C	TSG	chr9:125146572-125189803	Cancer Gene Census	-
+PRCC	fusion	chr1:156767534-156800815	Cancer Gene Census	+
+PRDM1	TSG	chr6:106098939-106109939	Cancer Gene Census	+
+PRDM16	oncogene, fusion	chr1:3069202-3438621	Cancer Gene Census	+
+PRDM2	TSG	chr1:13704854-13825079	Cancer Gene Census	+
+PREX2	oncogene	chr8:67952045-68237032	Cancer Gene Census	+
+PRF1	TSG	chr10:70597347-70602759	Cancer Gene Census	-
+PRKACA	oncogene	chr19:14091687-14117762	Cancer Gene Census	-
+PRKAR1A	oncogene, TSG, fusion	chr17:68512031-68532762	Cancer Gene Census	+
+PRKCB		chr16:23835982-24220611	Cancer Gene Census	+
+PRKD1	fusion	chr14:29576478-29927847	Cancer Gene Census	-
+PRPF40B		chr12:49623619-49644666	Cancer Gene Census	+
+PRRX1	fusion	chr1:170664130-170739421	Cancer Gene Census	+
+PSIP1	oncogene, fusion	chr9:15470635-15510991	Cancer Gene Census	-
+PTCH1	TSG	chr9:95442979-95509266	Cancer Gene Census	-
+PTEN	TSG	chr10:87863624-87971930	Cancer Gene Census	+
+PTK6	oncogene, TSG	chr20:63528424-63537370	Cancer Gene Census	-
+PTPN11	oncogene	chr12:112418946-112509918	Cancer Gene Census	+
+PTPN13	TSG	chr4:86594731-86815149	Cancer Gene Census	+
+PTPN6	TSG	chr12:6951355-6961316	Cancer Gene Census	+
+PTPRB	TSG	chr12:70521402-70609844	Cancer Gene Census	-
+PTPRC	TSG	chr1:198638967-198759342	Cancer Gene Census	+
+PTPRD	TSG	chr9:8314246-8733946	Cancer Gene Census	-
+PTPRK	TSG, fusion	chr6:128518927-128520570	Cancer Gene Census	-
+PTPRT	TSG	chr20:42072751-43189733	Cancer Gene Census	-
+PWWP2A	fusion	chr5:160091338-160119450	Cancer Gene Census	-
+QKI	oncogene, TSG	chr6:163414642-163570145	Cancer Gene Census	+
+RABEP1	fusion	chr17:5282486-5383223	Cancer Gene Census	+
+RAC1	oncogene	chr7:6374526-6403967	Cancer Gene Census	+
+RAD17	TSG	chr5:69371034-69414360	Cancer Gene Census	+
+RAD21	oncogene, TSG	chr8:116845933-116874776	Cancer Gene Census	-
+RAD50	TSG	chr5:132556976-132646349	Cancer Gene Census	+
+RAD51B	TSG, fusion	chr14:67819778-68497881	Cancer Gene Census	+
+RAD51C	TSG	chr17:58692601-58735611	Cancer Gene Census	+
+RAF1	oncogene, fusion	chr3:12583600-12664117	Cancer Gene Census	-
+RALGDS	fusion	chr9:133097719-133121176	Cancer Gene Census	-
+RANBP2	TSG, fusion	chr2:108719481-108785809	Cancer Gene Census	+
+RAP1B	oncogene	chr12:68610898-68671901	Cancer Gene Census	+
+RAP1GDS1	oncogene, fusion	chr4:98261430-98442117	Cancer Gene Census	+
+RARA	oncogene, fusion	chr17:40309179-40357643	Cancer Gene Census	+
+RB1	TSG	chr13:48303750-48481890	Cancer Gene Census	+
+RBM10	TSG	chrX:47145446-47186812	Cancer Gene Census	+
+RBM15	fusion	chr1:110339376-110346677	Cancer Gene Census	+
+RECQL4	oncogene, TSG	chr8:144511293-144512713	Cancer Gene Census	-
+REL	oncogene	chr2:60881520-60931610	Cancer Gene Census	+
+RET	oncogene, fusion	chr10:43077068-43127504	Cancer Gene Census	+
+RFWD3	TSG	chr16:74621398-74666877	Cancer Gene Census	-
+RGPD3		chr2:106391289-106468326	Cancer Gene Census	-
+RGS7		chr1:240775514-241355776	Cancer Gene Census	-
+RHOA	oncogene, TSG	chr3:49411944-49412998	Cancer Gene Census	-
+RHOH	TSG, fusion	chr4:40197030-40246967	Cancer Gene Census	+
+RMI2	TSG, fusion	chr16:11345458-11351760	Cancer Gene Census	+
+RNF213	fusion	chr17:80260869-80321463	Cancer Gene Census	+
+RNF43	TSG	chr17:58353675-58417534	Cancer Gene Census	-
+ROBO2	TSG	chr3:77040729-77647116	Cancer Gene Census	+
+ROS1	oncogene, fusion	chr6:117287352-117425942	Cancer Gene Census	-
+RPL10	TSG	chrX:154398371-154402339	Cancer Gene Census	+
+RPL22	TSG, fusion	chr1:6185019-6199595	Cancer Gene Census	-
+RPL5	TSG	chr1:92832108-92837469	Cancer Gene Census	+
+RPN1	fusion	chr3:128619968-128650818	Cancer Gene Census	-
+RRAS2	oncogene	chr11:14277921-14359183	Cancer Gene Census	-
+RSPO2	TSG, fusion	chr8:107899315-108083620	Cancer Gene Census	-
+RSPO3	oncogene, fusion	chr6:127118670-127199481	Cancer Gene Census	+
+RUNX1	oncogene, TSG, fusion	chr21:34787800-35049344	Cancer Gene Census	-
+RUNX1T1	oncogene, TSG, fusion	chr8:91959786-92095215	Cancer Gene Census	-
+RXRA	TSG	chr9:134371970-134440585	Cancer Gene Census	+
+S100A7	fusion	chr1:153457743-153459874	Cancer Gene Census	-
+SALL4	oncogene	chr20:51782330-51802521	Cancer Gene Census	-
+SBDS	TSG	chr7:66987679-66995586	Cancer Gene Census	-
+SDC4	fusion	chr20:45325287-45348424	Cancer Gene Census	-
+SDHA	TSG	chr5:218319-257082	Cancer Gene Census	+
+SDHAF2	TSG	chr11:61430123-61446733	Cancer Gene Census	+
+SDHB	TSG	chr1:17018721-17054032	Cancer Gene Census	-
+SDHC	TSG	chr1:161314380-161363189	Cancer Gene Census	+
+SDHD	TSG	chr11:112086872-112095794	Cancer Gene Census	+
+SEPT5	fusion		Cancer Gene Census	
+SEPT6	fusion		Cancer Gene Census	
+SEPT9	fusion		Cancer Gene Census	
+SET	oncogene, fusion	chr9:128689221-128696396	Cancer Gene Census	+
+SETBP1	oncogene, fusion	chr18:44680172-44877414	Cancer Gene Census	+
+SETD1B	TSG	chr12:121804179-121832584	Cancer Gene Census	+
+SETD2	TSG	chr3:47016435-47124250	Cancer Gene Census	-
+SETDB1	oncogene	chr1:150926338-150964735	Cancer Gene Census	+
+SF3B1	oncogene	chr2:197389783-197435028	Cancer Gene Census	-
+SFPQ	TSG, fusion	chr1:35182935-35193145	Cancer Gene Census	-
+SFRP4	TSG	chr7:37905931-37916817	Cancer Gene Census	-
+SGK1	oncogene	chr6:134169255-134174866	Cancer Gene Census	-
+SH2B3	TSG	chr12:111405922-111451623	Cancer Gene Census	+
+SH3GL1	oncogene, fusion	chr19:4360369-4400547	Cancer Gene Census	-
+SHTN1	fusion	chr10:116883376-117005577	Cancer Gene Census	-
+SIRPA	TSG	chr20:1894782-1939897	Cancer Gene Census	+
+SIX1	oncogene	chr14:60645269-60653026	Cancer Gene Census	-
+SIX2	oncogene	chr2:45005181-45009452	Cancer Gene Census	-
+SKI	oncogene	chr1:2228318-2310213	Cancer Gene Census	+
+SLC34A2	TSG, fusion	chr4:25655850-25678748	Cancer Gene Census	+
+SLC45A3	fusion	chr1:205657850-205680509	Cancer Gene Census	-
+SMAD2	TSG	chr18:47808956-47930659	Cancer Gene Census	-
+SMAD3	TSG	chr15:67065601-67195169	Cancer Gene Census	+
+SMAD4	TSG	chr18:51030212-51085042	Cancer Gene Census	+
+SMARCA4	TSG	chr19:10961029-11062273	Cancer Gene Census	+
+SMARCB1	TSG	chr22:23787010-23834501	Cancer Gene Census	+
+SMARCD1	TSG	chr12:50085199-50100642	Cancer Gene Census	+
+SMARCE1	TSG	chr17:40627780-40647830	Cancer Gene Census	-
+SMC1A	TSG	chrX:53374148-53422654	Cancer Gene Census	-
+SMO	oncogene	chr7:129188632-129213545	Cancer Gene Census	+
+SND1	oncogene, fusion	chr7:127652193-128092593	Cancer Gene Census	+
+SNX29	fusion	chr16:12356252-12443365	Cancer Gene Census	+
+SOCS1	TSG	chr16:11254416-11256204	Cancer Gene Census	-
+SOS1	oncogene, fusion	chr2:38985685-39120450	Cancer Gene Census	-
+SOX2	oncogene	chr3:181711924-181714436	Cancer Gene Census	+
+SOX21	TSG	chr13:94709621-94712545	Cancer Gene Census	-
+SPECC1	fusion	chr17:20087021-20314755	Cancer Gene Census	+
+SPEN	TSG	chr1:15847706-15940456	Cancer Gene Census	+
+SPOP	TSG	chr17:49598885-49678163	Cancer Gene Census	-
+SRC	oncogene	chr20:37384149-37406050	Cancer Gene Census	+
+SRGAP3	fusion	chr3:8980593-9249213	Cancer Gene Census	-
+SRSF2	oncogene	chr17:76734114-76737331	Cancer Gene Census	-
+SRSF3	oncogene, fusion	chr6:36594367-36600881	Cancer Gene Census	+
+SS18	fusion	chr18:26018013-26090901	Cancer Gene Census	-
+SS18L1	fusion	chr20:62143768-62182514	Cancer Gene Census	+
+SSX1	oncogene, fusion	chrX:48255391-48267444	Cancer Gene Census	+
+SSX2	oncogene, fusion	chrX:52696895-52707161	Cancer Gene Census	-
+SSX4	oncogene, fusion	chrX:48383538-48393347	Cancer Gene Census	+
+STAG1	TSG	chr3:136336235-136752378	Cancer Gene Census	-
+STAG2	TSG	chrX:123960518-124101498	Cancer Gene Census	+
+STAT3	oncogene	chr17:42313323-42388442	Cancer Gene Census	-
+STAT5B	oncogene, TSG, fusion	chr17:42199176-42276391	Cancer Gene Census	-
+STAT6	oncogene, fusion	chr12:57095407-57111362	Cancer Gene Census	-
+STIL	oncogene, fusion	chr1:47250172-47314892	Cancer Gene Census	-
+STK11	TSG	chr19:1205777-1228431	Cancer Gene Census	+
+STRN	fusion	chr2:36837697-36966536	Cancer Gene Census	-
+SUB1		chr5:32585556-32604079	Cancer Gene Census	+
+SUFU	TSG	chr10:102504006-102619462	Cancer Gene Census	+
+SUZ12	oncogene, TSG, fusion	chr17:31937006-32001038	Cancer Gene Census	+
+SYK	oncogene, fusion	chr9:90827487-90898549	Cancer Gene Census	+
+TAF15	oncogene, fusion	chr17:35831445-35847183	Cancer Gene Census	+
+TAL1	oncogene, fusion	chr1:47216291-47229771	Cancer Gene Census	-
+TAL2	oncogene, fusion	chr9:105662456-105663124	Cancer Gene Census	+
+TBL1XR1	oncogene, TSG, fusion	chr3:177024765-177197252	Cancer Gene Census	-
+TBX3	oncogene, TSG	chr12:114670254-114683590	Cancer Gene Census	-
+TCEA1	fusion	chr8:53966551-54022448	Cancer Gene Census	-
+TCF12	fusion	chr15:56918624-57289853	Cancer Gene Census	+
+TCF3	oncogene, TSG, fusion	chr19:1609291-1652615	Cancer Gene Census	-
+TCF7L2	oncogene, fusion	chr10:112950249-113166312	Cancer Gene Census	+
+TCL1A	oncogene, fusion	chr14:95709946-95714125	Cancer Gene Census	-
+TEC	oncogene, fusion	chr4:48135782-48269838	Cancer Gene Census	-
+TENT5C	TSG	chr1:117606047-117628389	Cancer Gene Census	+
+TERT	oncogene, TSG	chr5:1253166-1295068	Cancer Gene Census	-
+TET1	oncogene, TSG, fusion	chr10:68560336-68694487	Cancer Gene Census	+
+TET2	TSG	chr4:105146785-105279803	Cancer Gene Census	+
+TFE3	oncogene, fusion	chrX:49028725-49043357	Cancer Gene Census	-
+TFEB	oncogene, fusion	chr6:41683977-41735060	Cancer Gene Census	-
+TFG	fusion	chr3:100709493-100748964	Cancer Gene Census	+
+TFPT	fusion	chr19:54107019-54115288	Cancer Gene Census	-
+TFRC	fusion	chr3:196049283-196082090	Cancer Gene Census	-
+TGFBR2	TSG	chr3:30606600-30694142	Cancer Gene Census	+
+THRAP3	fusion	chr1:36224442-36305357	Cancer Gene Census	+
+TLX1	oncogene, fusion	chr10:101131299-101137789	Cancer Gene Census	+
+TLX3	oncogene, fusion	chr5:171309247-171312139	Cancer Gene Census	+
+TMEM127	TSG	chr2:96248513-96265997	Cancer Gene Census	-
+TMPRSS2	fusion	chr21:41464304-41508158	Cancer Gene Census	-
+TMSB4X	oncogene	chrX:12975657-12977081	Cancer Gene Census	+
+TNC	oncogene	chr9:115020559-115091147	Cancer Gene Census	-
+TNFAIP3	TSG	chr6:137867443-137883312	Cancer Gene Census	+
+TNFRSF14	TSG	chr1:2556370-2563829	Cancer Gene Census	+
+TNFRSF17	oncogene, fusion	chr16:11965209-11968068	Cancer Gene Census	+
+TNRC18	fusion	chr7:5313110-5320607	Cancer Gene Census	-
+TOP1	fusion	chr20:41028821-41124487	Cancer Gene Census	+
+TP53	oncogene, TSG, fusion	chr17:7668420-7687490	Cancer Gene Census	-
+TP63	oncogene, TSG	chr3:189631388-189897276	Cancer Gene Census	+
+TPM3	TSG, fusion	chr1:154157317-154192058	Cancer Gene Census	-
+TPM4	fusion	chr19:16076644-16102952	Cancer Gene Census	+
+TPR	fusion	chr1:186311651-186375253	Cancer Gene Census	-
+TRA	fusion		Cancer Gene Census	
+TRAF7	TSG	chr16:2155781-2178129	Cancer Gene Census	+
+TRB	fusion		Cancer Gene Census	
+TRD	fusion		Cancer Gene Census	
+TRIM24	oncogene, TSG, fusion	chr7:138460258-138589996	Cancer Gene Census	+
+TRIM27	oncogene, fusion	chr6:28903001-28923988	Cancer Gene Census	-
+TRIM33	TSG, fusion	chr1:114392789-114511203	Cancer Gene Census	-
+TRIP11	fusion	chr14:91965990-92040059	Cancer Gene Census	-
+TRRAP	oncogene	chr7:98878489-99013243	Cancer Gene Census	+
+TSC1	TSG	chr9:132891348-132944616	Cancer Gene Census	-
+TSC2	TSG	chr16:2047984-2089491	Cancer Gene Census	+
+TSHR		chr14:80955620-81146306	Cancer Gene Census	+
+U2AF1	oncogene	chr21:43092955-43107570	Cancer Gene Census	-
+UBR5	oncogene	chr8:102253735-102412689	Cancer Gene Census	-
+USP44	TSG	chr12:95516559-95551476	Cancer Gene Census	-
+USP6	oncogene, fusion	chr17:5128391-5175034	Cancer Gene Census	+
+USP8	oncogene	chr15:50424404-50514421	Cancer Gene Census	+
+USP9X	fusion	chrX:41085444-41236579	Cancer Gene Census	+
+VAV1	fusion	chr19:6772713-6857366	Cancer Gene Census	+
+VHL	TSG	chr3:10141777-10153667	Cancer Gene Census	+
+VTI1A	fusion	chr10:112447214-112818744	Cancer Gene Census	+
+WAS	oncogene	chrX:48683798-48691427	Cancer Gene Census	+
+WDCP	fusion	chr2:24029346-24047391	Cancer Gene Census	-
+WIF1	TSG, fusion	chr12:65050625-65121305	Cancer Gene Census	-
+WNK2	TSG	chr9:93184121-93319205	Cancer Gene Census	+
+WRN	TSG	chr8:31033809-31176138	Cancer Gene Census	+
+WT1	oncogene, TSG, fusion	chr11:32387783-32435564	Cancer Gene Census	-
+WWTR1	oncogene, fusion	chr3:149517234-149658025	Cancer Gene Census	-
+XPA	TSG	chr9:97674908-97697340	Cancer Gene Census	-
+XPC	TSG	chr3:14145146-14178601	Cancer Gene Census	-
+XPO1	oncogene	chr2:61477848-61538356	Cancer Gene Census	-
+YAP1	fusion, oncogene	chr11:102110446-102233424	Cancer Gene Census	+
+YWHAE	TSG, fusion	chr17:1344274-1400222	Cancer Gene Census	-
+ZBTB16	TSG, fusion	chr11:114059710-114256765	Cancer Gene Census	+
+ZCCHC8	fusion	chr12:122472869-122499325	Cancer Gene Census	-
+ZEB1	oncogene	chr10:31319124-31529202	Cancer Gene Census	+
+ZFHX3	TSG	chr16:72782884-73048128	Cancer Gene Census	-
+ZMYM2	fusion	chr13:20026518-20086747	Cancer Gene Census	+
+ZMYM3	TSG	chrX:71239623-71254140	Cancer Gene Census	-
+ZNF331	TSG, fusion	chr19:53521023-53580269	Cancer Gene Census	+
+ZNF384	fusion	chr12:6666476-6689510	Cancer Gene Census	-
+ZNF429		chr19:21505601-21540668	Cancer Gene Census	+
+ZNF479		chr7:57117675-57132436	Cancer Gene Census	-
+ZNF521	oncogene, fusion	chr18:25061923-25352166	Cancer Gene Census	-
+ZNRF3	TSG	chr22:28917388-29053685	Cancer Gene Census	+
+ZRSR2	TSG	chrX:15790483-15823260	Cancer Gene Census	+

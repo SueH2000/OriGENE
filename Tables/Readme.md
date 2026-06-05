@@ -1,8 +1,13 @@
-# Tables:
+# Tables
 
-This folder contains several tables relevant for the project
+This folder contains summary tables used for interpretation and reporting.
 
-### *1. Rankings*
-The 100 genes with highest probability to be CDs in different case scenarios.
+## Rankings
 
+The ranking files list genes with the highest predicted probability of being cancer drivers under different experimental settings.
 
+Use these tables when you want to:
+
+- inspect the top model predictions,
+- compare scenarios such as tissue-specific or marker-specific runs,
+- export concise result summaries for reports or figures.

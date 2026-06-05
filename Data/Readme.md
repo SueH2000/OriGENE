@@ -1,35 +1,61 @@
 # Data
 
-### *1. Dataset information and Performance Metrics*
+This folder contains the main reference files and derived outputs used in OriGENE.
 
-Data about Gene Expression Omnibus accession names for the used files and their properties: number of reads, names, markers, quality of the mapping...
-Tables with performance metrics for OriGENE in differen scenarios can also be found here.
+## What is in this folder
 
-### *2. Gene target labels and information*
+### 1. Dataset information and performance metrics
 
-The files CD_Binary_All_CGCv.96.csv and CD_NG_Training_Validation_Binary_Liver_specificII.txt contain information about the gene sets used in different contexts:
-- Pan-cancer study: CGC v96 genes.
-- Liver-specific study: Cancermine genes 
+The subfolder `Dataset information and Performance metrics/` contains supporting information about the datasets used in the project, including accession-related details and summary performance tables.
 
-    
-These files, which were used in order to retrieve the original input sequences, contain the following information in columns:
-- **Gene name** : name as it can be found in the Genome Browser: <https://genome.ucsc.edu/>. Original paper: Kent WJ, Sugnet CW, Furey TS, Roskin KM, Pringle TH, Zahler AM, Haussler D. *The human genome browser at UCSC.* Genome Res. 2002 Jun;12(6):996-1006. 
-    
-- **Target category or label**: 
-  -  CDs (TSG/OGs) were obtained from The Cancer Gene Census, a highly curated database ( <https://cancer.sanger.ac.uk/census>)
-  -  Housekeeping, Neutral Genes (NGs) were obtained from DORGE, Lyu et al., Sci. Adv. 2020; 6 : eaba6784     11 November 2020. They were a further curated set of the genes found in T. Davoli et al., *Cumulative haploinsufficiency and triplosensitivity drive aneuploidy patterns and shape the cancer genome.* Cell 155, 948–962 (2013). <https://doi.org/10.1016/j.cell.2013.10.011>.
-  - For the liver-specific scenario, the gene names were obtained from  J. Lever et al., *CancerMine: a literature-mined resource for drivers, oncogenes and tumor suppressors in cancer.* Nature Methods volume 16, pages 505–507 (2019). <http://bionlp.bcgsc.ca/cancermine>
+Use these files when you want to understand:
 
-    
-- **Location in the genome**: Location in the Human reference genome assembly hg38 given as chr{Number}:{Leftmost basepair}-{Rightmost basepair}
+- which public datasets were used,
+- which histone marks or study settings were included,
+- how OriGENE performed in different evaluation scenarios.
 
-- **Source**: Where was the information found
-- **Strand**: 'pos' or 'neg'
+### 2. Gene label files
 
-### *3. Numpy arrays*
+Two important files in this folder define gene sets and labels used in the study:
 
-Numpy arrays containing different types of data.
+- `CD_Binary_All_CGCv.96.csv`
+- `CD_NG_Training_Validation_Binary_Liver_specificII.txt`
+- `diagnostic_file.tsv`
 
-### *4. Model weights*
+They are used to describe which genes are treated as cancer drivers or neutral genes in different scenarios.
 
-.hdf5 files containing weights for OriGENE in different scenarios.
+Examples of usage:
+
+- pan-cancer setting: Cancer Gene Census based labels,
+- liver-specific setting: CancerMine-derived labels.
+
+Typical columns include:
+
+- gene name,
+- target label,
+- genomic location in hg38,
+- source,
+- strand.
+
+The file `diagnostic_file.tsv` is used together with `Epigenetics_newgenes.py` to extract per-gene signal windows from chromosome-level files.
+
+### 3. Numpy arrays
+
+The folder `Numpy_arrays/` contains saved arrays used for evaluation and analysis.
+
+See `Data/Numpy_arrays/Readme.md` for details.
+
+### 4. Model weights
+
+The folder `Model_weights/` contains example OriGENE weight files in HDF5 format.
+
+See `Data/Model_weights/Readme.md` for details.
+
+## Notes on naming
+
+In this project:
+
+- `CD` means cancer driver,
+- `NG` means normal or neutral gene,
+- `OG` means oncogene,
+- `TSG` means tumor suppressor gene.

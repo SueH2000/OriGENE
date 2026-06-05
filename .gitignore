@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Snakemake
+.snakemake/
+
+# Local environments
+.venv/
+venv/
+ENV/
+
+# Pipeline outputs
+epigenetic_snakemake_pipline/results/
+mutation(VCF)_snakemake_pipeline/results/
+mutation_feature_pipeline/results/
+
+# Large bioinformatics intermediates
+*.bam
+*.bai
+*.sam
+*.sra
+*.fastq
+*.fastq.gz
+*.vcf
+*.vcf.gz
+*.vcf.gz.tbi
+
+# OS files
+Thumbs.db
+.DS_Store

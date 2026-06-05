@@ -1,145 +1,105 @@
-# Variant Calling Pipeline
+# Variant-calling pipeline
 
-### Introduction
+This folder contains the Snakemake workflow that converts raw sequencing input into compressed, indexed VCF files.
 
-A Snakemake workflow was prepared to automate the conversion of sequencing read files into variant calls in VCF format. This workflow is the upstream step for the mutation feature extraction pipeline.
+## What this workflow does
 
-The workflow performs read conversion, genome alignment, BAM processing, duplicate removal, and variant calling. The final output is a compressed and indexed VCF file for each sample.
+It covers:
 
-The pipeline supports multiple input types and produces compressed, indexed VCF files suitable for downstream annotation and mutation feature extraction.
+```text
+SRA or FASTQ
+-> FASTQ preparation
+-> Bowtie2 alignment
+-> sorted BAM
+-> duplicate-filtered BAM
+-> BAM indexing
+-> bcftools variant calling
+-> compressed VCF plus tabix index
+```
 
-**Note:** This workflow is intended to generate VCF files for downstream VEP annotation and mutation feature extraction. It does not compute mutation features directly.
+It does not compute mutation features directly. Its job is to produce VCF files for the downstream mutation feature pipeline.
 
----
+## Why this workflow exists
 
-## Workflow
+The mutation-aware OriGENE branch needs variant calls before it can build gene-level mutation features.
 
-The pipeline performs the following steps:
+## Important files
 
-Input (SRA / FASTQ)
-→ FASTQ preparation
-→ Read alignment (Bowtie2)
-→ BAM sorting
-→ Duplicate removal
-→ BAM indexing
-→ Variant calling (bcftools)
-→ Compressed VCF + index
+- `workflow/Snakefile`
+- `config/config.yaml`
+- `config/samples.tsv`
+- `envs/`
 
----
+## Input formats
 
-## Input Data
+Samples are defined in `config/samples.tsv`.
 
-### Reference genome
+Required columns:
 
-resources/genome/hg38.fa
-
-Download by
-!wget https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.fa.gz
----
-
-### Sample table
-
-config/samples.tsv
-
-Format:
-
-sample    input_type    read1    read2
-
-Supported input types:
-- sra
-- fastq_single
-- fastq_paired
-
-Example:
-
-SRR1947881    fastq_single    data/fastq/SRR1947881.fastq.gz
-SRR12491691   fastq_paired    data/fastq/SRR12491691_1.fastq.gz    data/fastq/SRR12491691_2.fastq.gz
-
----
+| Column | Meaning |
+|---|---|
+| `sample` | Sample name used in output filenames |
+| `input_type` | One of `sra`, `fastq_single`, or `fastq_paired` |
+| `read1` | SRA accession or FASTQ path |
+| `read2` | Empty for single-end input, or paired-end R2 FASTQ path |
 
 ## Configuration
 
-config/config.yaml
+Edit `config/config.yaml` before running.
 
-Required:
+Important settings:
 
-genome: resources/genome/hg38.fa
+- `samples_file`
+- `genome`
+- `fastq_dir`
+- `bam_dir`
+- `dedup_bam_dir`
+- `vcf_dir`
+- `bowtie_threads`
+- `samtools_threads`
+- `bcftools_threads`
 
-Optional:
+The current default VCF output directory is:
 
-bowtie_threads: 6  
-samtools_threads: 6  
-bcftools_threads: 4  
+```text
+results/04_called_variants
+```
 
----
+## Reference genome
 
-## Installation
+Current default:
 
-conda create -n snakemake -c conda-forge -c bioconda snakemake  
-conda activate snakemake  
+```text
+resources/genome/hg38.fa
+```
 
-Dependencies are installed automatically with:
+## How to run
 
---use-conda
+From this folder:
 
----
-
-## Running the Pipeline
-
-Dry run:
-
+```bash
+conda create -n snakemake -c conda-forge -c bioconda snakemake
+conda activate snakemake
 snakemake -s workflow/Snakefile --configfile config/config.yaml -n -p
+snakemake -s workflow/Snakefile --configfile config/config.yaml --use-conda -j 6 -p
+```
 
-Run:
+## Main outputs
 
-snakemake -s workflow/Snakefile \
-  --configfile config/config.yaml \
-  --use-conda \
-  --conda-frontend conda \
-  -j6 -p
+- `results/01_fastq_files/`
+- `results/02_bam_sorted_files/`
+- `results/03_bam_deduplicated_files/`
+- `results/04_called_variants/`
 
----
+Each sample should produce:
 
-## Output
+- `<sample>.vcf.gz`
+- `<sample>.vcf.gz.tbi`
 
-results/05_called_variants/
+## Downstream use
 
-Each sample produces:
+The expected next step is:
 
-<sample>.vcf.gz  
-<sample>.vcf.gz.tbi  
-
----
-
-## Directory Structure
-
-variant_calling_pipeline/
-├── workflow/
-│   └── Snakefile
-├── config/
-│   ├── config.yaml
-│   └── samples.tsv
-├── envs/
-├── resources/
-│   └── genome/
-│       └── hg38.fa
-├── data/
-│   └── fastq/
-└── results/
----
-
-## Downstream Use
-
-VCF → VEP annotation → mutation feature extraction
-
-Example:
-
-SRR1947881    results/04_called_variants/SRR1947881.vcf.gz
-
----
-
-## Notes
-
-- Duplicate removal uses samtools rmdup
-- VCF files are bgzip-compressed and tabix-indexed
-- Designed for reproducible execution via Snakemake
+```text
+VCF -> VEP annotation -> mutation feature extraction
+```
