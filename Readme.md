@@ -3,6 +3,7 @@
 **Cancer gene classification using deep convolutional neural networks on epigenetic marker enrichment profiles**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Snakemake](https://img.shields.io/badge/snakemake-≥6.0-brightgreen.svg)](https://snakemake.readthedocs.io)
 [![Python 3.9](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/)
 
 > **Authors:** Marc Pielies-Avelli, Ming-Heng Hsiung, Dr. Alin S. Tomoiaga, Dr. Mattias Ohlsson, Dr. Victor Olariu
