@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "OriGENE: cancer driver gene classification using deep convolutional neural networks on epigenetic marker enrichment profiles"
+version: "1.0.0"
+date-released: "2026-06-06"
+authors:
+  - family-names: "Pielies Avellí"
+    given-names: "Marc"
+  - family-names: "Hsiung"
+    given-names: "Ming-Heng"
+  - family-names: "Ohlsson"
+    given-names: "Mattias"
+  - family-names: "Tomoiaga"
+    given-names: "Alin S."
+  - family-names: "Olariu"
+    given-names: "Victor"
+repository-code: "https://github.com/SueH2000/OriGENE"
+license: "MIT"
