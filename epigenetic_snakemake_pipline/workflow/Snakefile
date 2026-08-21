@@ -447,11 +447,22 @@ rule bam_to_bedgraph:
     output:
         bedgraph=f"{BEDGRAPH_DIR}/{{sample}}.bedgraph"
     conda:
-        "envs/htslib.yaml"
+        "envs/bedtools.yaml"
     shell:
         r"""
+        set -euo pipefail
         mkdir -p {BEDGRAPH_DIR}
-        bedtools genomecov -bg -ibam {input.bam} > {output.bedgraph}
+
+        test -s "{input.bam}"
+
+        tmp="{output.bedgraph}.tmp"
+        trap 'rm -f "$tmp"' EXIT
+
+        bedtools genomecov -bg -ibam "{input.bam}" > "$tmp"
+        test -s "$tmp"
+
+        mv "$tmp" "{output.bedgraph}"
+        trap - EXIT
         """
 
 
@@ -465,9 +476,20 @@ rule sort_bedgraph:
     output:
         bedgraph=f"{SORTED_BEDGRAPH_DIR}/{{sample}}.bedgraph.sorted"
     conda:
-        "envs/htslib.yaml"
+        "envs/ucsc.yaml"
     shell:
         r"""
+        set -euo pipefail
         mkdir -p {SORTED_BEDGRAPH_DIR}
-        bedSort {input.bedgraph} {output.bedgraph}
+
+        test -s "{input.bedgraph}"
+
+        tmp="{output.bedgraph}.tmp"
+        trap 'rm -f "$tmp"' EXIT
+
+        bedSort "{input.bedgraph}" "$tmp"
+        test -s "$tmp"
+
+        mv "$tmp" "{output.bedgraph}"
+        trap - EXIT
         """
