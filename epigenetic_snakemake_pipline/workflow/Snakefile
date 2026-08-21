@@ -17,6 +17,8 @@
 # It avoids writing large intermediate SAM files.
 ####################################################################################################
 
+import re
+
 import pandas as pd
 
 configfile: "config/config.yaml"
@@ -99,6 +101,9 @@ def sample_row(sample):
     return row.iloc[0]
 
 
+SRA_ACCESSION_PATTERN = re.compile(r"^(SRR|ERR|DRR)\\d+$")
+
+
 def input_type_for_sample(wildcards):
     return sample_row(wildcards.sample)["input_type"]
 
@@ -109,6 +114,28 @@ def read1_for_sample(wildcards):
 
 def read2_for_sample(wildcards):
     return sample_row(wildcards.sample)["read2"]
+
+
+def sra_source_for_sample(wildcards):
+    source = read1_for_sample(wildcards).strip()
+    if not source:
+        raise ValueError(
+            f"SRA sample {wildcards.sample} has an empty read1 value in {SAMPLES_FILE}"
+        )
+    return source
+
+
+def local_sra_input_for_sample(wildcards):
+    source = sra_source_for_sample(wildcards)
+
+    # A bare run accession is a remote identifier, not a filesystem path.
+    # fastq-dump resolves it through SRA Toolkit, so Snakemake must not
+    # attempt to find it as a local input file while constructing the DAG.
+    if SRA_ACCESSION_PATTERN.fullmatch(source):
+        return []
+
+    # Any other value is intentionally treated as a local file path.
+    return source
 
 
 ####################################################################################################
@@ -155,22 +182,33 @@ rule bowtie_index:
 
 rule prepare_fastq_sra:
     input:
-        read1=read1_for_sample
+        local_sra=local_sra_input_for_sample
     output:
         fastq=f"{FASTQ_DIR}/{{sample}}.fastq.gz"
     params:
-        input_type=input_type_for_sample
+        input_type=input_type_for_sample,
+        source=sra_source_for_sample
     conda:
         "envs/sra_tools.yaml"
     shell:
         r"""
+        set -euo pipefail
+
         if [ "{params.input_type}" != "sra" ]; then
             echo "ERROR: sample {wildcards.sample} is not input_type=sra" >&2
             exit 1
         fi
 
         mkdir -p {FASTQ_DIR}
-        fastq-dump --gzip --stdout {input.read1} > {output.fastq}
+
+        tmp="{output.fastq}.tmp"
+        trap 'rm -f "$tmp"' EXIT
+
+        fastq-dump --gzip --stdout "{params.source}" > "$tmp"
+        test -s "$tmp"
+
+        mv "$tmp" "{output.fastq}"
+        trap - EXIT
         """
 
 
