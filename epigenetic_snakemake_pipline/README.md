@@ -79,9 +79,27 @@ From this folder:
 ```bash
 conda create -n snakemake -c conda-forge -c bioconda snakemake
 conda activate snakemake
-snakemake -s workflow/Snakefile -n -p
-snakemake -s workflow/Snakefile -p --use-conda -j 6
+
+snakemake -s workflow/Snakefile \
+  --use-conda \
+  --conda-frontend conda \
+  --cores 1 \
+  --conda-create-envs-only
+
+snakemake -s workflow/Snakefile \
+  --use-conda \
+  --conda-frontend conda \
+  -n -p -j 6
+
+snakemake -s workflow/Snakefile \
+  --use-conda \
+  --conda-frontend conda \
+  -p -j 6
 ```
+
+The LEMA workflow uses Conda rather than Mamba. Keep
+`--conda-frontend conda` in every Snakemake command that enables
+`--use-conda`.
 
 ## Main outputs
 
