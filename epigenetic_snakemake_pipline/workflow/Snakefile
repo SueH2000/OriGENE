@@ -450,19 +450,8 @@ rule bam_to_bedgraph:
         "envs/bedtools.yaml"
     shell:
         r"""
-        set -euo pipefail
         mkdir -p {BEDGRAPH_DIR}
-
-        test -s "{input.bam}"
-
-        tmp="{output.bedgraph}.tmp"
-        trap 'rm -f "$tmp"' EXIT
-
-        bedtools genomecov -bg -ibam "{input.bam}" > "$tmp"
-        test -s "$tmp"
-
-        mv "$tmp" "{output.bedgraph}"
-        trap - EXIT
+        bedtools genomecov -bg -ibam {input.bam} > {output.bedgraph}
         """
 
 
@@ -479,17 +468,6 @@ rule sort_bedgraph:
         "envs/ucsc.yaml"
     shell:
         r"""
-        set -euo pipefail
         mkdir -p {SORTED_BEDGRAPH_DIR}
-
-        test -s "{input.bedgraph}"
-
-        tmp="{output.bedgraph}.tmp"
-        trap 'rm -f "$tmp"' EXIT
-
-        bedSort "{input.bedgraph}" "$tmp"
-        test -s "$tmp"
-
-        mv "$tmp" "{output.bedgraph}"
-        trap - EXIT
+        bedSort {input.bedgraph} {output.bedgraph}
         """
