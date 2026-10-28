@@ -12,7 +12,7 @@
 
 ## Overview
 
-OriGENE is a deep learning framework that predicts cancer driver genes from histone modification enrichment profiles. By training a 1D convolutional neural network on ChIP-seq signals around gene regions, OriGENE primarily distinguishes **cancer driver genes (CD)** from **normal genes (NG)**, with performance validated against curated cancer gene reference sets.
+OriGENE is a deep learning framework that predicts cancer driver genes from histone modification enrichment profiles. By training a 1D convolutional neural network on ChIP-seq signals around gene regions, OriGENE primarily distinguishes **cancer driver genes (CD)** from **neutral genes (NG)**, with performance validated against curated cancer gene reference sets.
 
 **Key capabilities:**
 
@@ -42,8 +42,8 @@ OriGENE_published/
 |- assets/                            # Figures and other repository media
 |- Tables/                            # Output summary tables
 |- OriGENE_main_code.ipynb            # Main model: training, evaluation, visualization
-|- OriGENE_mutation_branch.ipynb      # Mutation-aware model variant
-|- Data-visualization.ipynb           # Exploratory analysis and figures
+|- OriGENE_Mutation_Branch.ipynb      # Mutation-aware model variant
+|- Data-visualization.ipynb           # Main manuscript Figures 1–7
 |- Epigenetics_newgenes.py            # Gene-level signal extraction helper
 |- envs/                              # Notebook environment
 `- Readme.md
@@ -62,7 +62,7 @@ OriGENE exploits the fact that cancer driver genes exhibit systematically differ
 | Label | Definition |
 |---|---|
 | CD | Cancer driver |
-| NG | Normal gene (non-driver) |
+| NG | Neutral gene (reference negative class) |
 
 OG and TSG remain useful biological background categories in the source annotations, but the main training setup in this repository is centered on CD versus NG labels.
 
@@ -94,7 +94,7 @@ python -m ipykernel install --user --name origene-model --display-name "Python (
 **Clone the repository:**
 
 ```bash
-git clone https://github.com/<org>/OriGENE.git
+git clone https://github.com/SueH2000/OriGENE.git
 cd OriGENE
 ```
 
@@ -163,7 +163,7 @@ Run inside `OriGENE_main_code.ipynb`:
 ### 5. Model training and evaluation
 
 Open and run `OriGENE_main_code.ipynb`.  
-For the mutation-aware variant, use `OriGENE_mutation_branch.ipynb`.
+For the mutation-aware variant, use `OriGENE_Mutation_Branch.ipynb`.
 
 ---
 
@@ -205,7 +205,7 @@ OriGENE processes 1D epigenetic signal sequences through three functional blocks
 |---|---|
 | TSS | Transcription start site |
 | CD | Cancer driver |
-| NG | Normal gene (non-driver) |
+| NG | Neutral gene (reference negative class) |
 | ChIP-seq | Chromatin immunoprecipitation sequencing |
 | bedGraph | Genome coverage format |
 
@@ -220,3 +220,13 @@ This project is licensed under the MIT License. See `LICENSE` for details.
 ## Citation
 
 If you use OriGENE in your research, please cite the associated thesis, paper, or software record accompanying this repository.
+
+## Reproducing the main manuscript figures
+
+Run `Data-visualization.ipynb` from the repository root, with `Data/Main_figures/` in place. Run cells in order. The notebook produces eight PNG files for seven manuscript figures (Figure 3 has separate panels a and b).
+
+Figures 1 and 2 reproduce the supplied manuscript artwork without recomputing the underlying signals or activations. Figures 3–7 are plotted from the supplied numerical inputs. Replotting saved predictions does not retrain the models or reproduce every supplementary analysis. The plotting code uses Matplotlib's LaTeX rendering and therefore requires a working TeX installation and its font/rendering dependencies.
+
+## Archived software
+
+Version v1.0.0 is cited in the manuscript as https://doi.org/10.5281/zenodo.20568995. The development branch contains later changes. The v1.0.0 citation identifies that release, not the current development branch.
