@@ -447,7 +447,7 @@ rule bam_to_bedgraph:
     output:
         bedgraph=f"{BEDGRAPH_DIR}/{{sample}}.bedgraph"
     conda:
-        "envs/htslib.yaml"
+        "envs/bedtools.yaml"
     shell:
         r"""
         mkdir -p {BEDGRAPH_DIR}
@@ -465,7 +465,7 @@ rule sort_bedgraph:
     output:
         bedgraph=f"{SORTED_BEDGRAPH_DIR}/{{sample}}.bedgraph.sorted"
     conda:
-        "envs/htslib.yaml"
+        "envs/ucsc.yaml"
     shell:
         r"""
         mkdir -p {SORTED_BEDGRAPH_DIR}
