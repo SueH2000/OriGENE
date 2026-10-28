@@ -1,0 +1,2 @@
+gene_set	source	target	evaluation_type	auroc	auprc	threshold	accuracy	sensitivity_recall	specificity	precision	f1	tn	fp	fn	tp	auroc_ci_level	auroc_ci_low	auroc_ci_high	auroc_bootstrap_n	auprc_ci_level	auprc_ci_low	auprc_ci_high	auprc_bootstrap_n
+length_set2	Liver_II_Normal	Liver_II_Normal	within_patient_pooled_oof	0.7682227465285727	0.7678173366035032	0.5	0.7070151306740028	0.7138927097661623	0.7001375515818432	0.7042062415196744	0.7090163934426229	509	218	208	519	0.9	0.7484993402872904	0.7884938358066474	1000	0.9	0.7431800991553267	0.7942409083425304	1000

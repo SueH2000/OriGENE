@@ -1,0 +1,2 @@
+gene_set	source	target	evaluation_type	auroc	auprc	threshold	accuracy	sensitivity_recall	specificity	precision	f1	tn	fp	fn	tp	auroc_ci_level	auroc_ci_low	auroc_ci_high	auroc_bootstrap_n	auprc_ci_level	auprc_ci_low	auprc_ci_high	auprc_bootstrap_n
+length_set2	Lung_II_Normal	Lung_II_Normal	within_patient_pooled_oof	0.780640229769795	0.7778784852026139	0.5	0.7200825309491059	0.6973865199449794	0.7427785419532325	0.7305475504322767	0.7135819845179451	540	187	220	507	0.9	0.7609073310836857	0.8001825346040626	1000	0.9	0.7500348182382033	0.8055252206036616	1000
