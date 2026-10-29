@@ -1,0 +1,13 @@
+gene_set	source	N	N_CD	N_NG	N_padded	N_no_padding	N_padded_CD	N_padded_NG	support_mismatch_genes	support_mismatch_bp	nonzero_in_padding_genes
+original_ng	Lung_I_Normal	1454	727	727	795	659	287	508	0	0	0
+original_ng	Lung_II_Normal	1454	727	727	795	659	287	508	0	0	0
+original_ng	Liver_I_Normal	1454	727	727	794	660	287	507	0	0	0
+original_ng	Liver_II_Normal	1454	727	727	795	659	287	508	0	0	0
+length_set1	Lung_I_Normal	1454	727	727	592	862	287	305	0	0	0
+length_set1	Lung_II_Normal	1454	727	727	592	862	287	305	0	0	0
+length_set1	Liver_I_Normal	1454	727	727	592	862	287	305	0	0	0
+length_set1	Liver_II_Normal	1454	727	727	592	862	287	305	0	0	0
+length_set2	Lung_I_Normal	1454	727	727	592	862	287	305	0	0	0
+length_set2	Lung_II_Normal	1454	727	727	592	862	287	305	0	0	0
+length_set2	Liver_I_Normal	1454	727	727	592	862	287	305	0	0	0
+length_set2	Liver_II_Normal	1454	727	727	592	862	287	305	0	0	0
