@@ -34,11 +34,13 @@ OriGENE is a deep learning framework that predicts cancer driver genes from hist
 ## Repository Structure
 
 ```text
-OriGENE_published/
+OriGENE/
 |- epigenetic_snakemake_pipline/      # ChIP-seq preprocessing workflow
 |- mutation(VCF)_snakemake_pipeline/  # VCF generation workflow
 |- mutation_feature_pipeline/         # Mutation feature extraction
-|- Data/                              # Gene lists, reference files, saved outputs
+|- Data/                              # Gene lists, reference files, main-figure inputs
+|- analysis_scripts/                  # Gene-disjoint training/evaluation and padding analysis
+|- Supplementary/                     # Supplementary result scripts and input documentation
 |- assets/                            # Figures and other repository media
 |- Tables/                            # Output summary tables
 |- OriGENE_main_code.ipynb            # Main model: training, evaluation, visualization
@@ -48,6 +50,9 @@ OriGENE_published/
 |- envs/                              # Notebook environment
 `- Readme.md
 ```
+
+Directory guides: [Data](Data/Readme.md), [analysis scripts](analysis_scripts/README.md), and [supplementary analyses](Supplementary/README.md).
+
 
 ---
 
@@ -165,6 +170,8 @@ Run inside `OriGENE_main_code.ipynb`:
 Open and run `OriGENE_main_code.ipynb`.  
 For the mutation-aware variant, use `OriGENE_Mutation_Branch.ipynb`.
 
+For the 40-kbp paired gene-disjoint training and transfer evaluation used for Figure 7, see [analysis_scripts/README.md](analysis_scripts/README.md). Fixed gene-set and dataset settings are included in `analysis_scripts/train_gene_disjoint.py`.
+
 ---
 
 ## Model Architecture
@@ -225,8 +232,7 @@ If you use OriGENE in your research, please cite the associated thesis, paper, o
 
 Run `Data-visualization.ipynb` from the repository root, with `Data/Main_figures/` in place. Run cells in order. The notebook produces eight PNG files for seven manuscript figures (Figure 3 has separate panels a and b).
 
-Figures 1 and 2 reproduce the supplied manuscript artwork without recomputing the underlying signals or activations. Figures 3–7 are plotted from the supplied numerical inputs. Replotting saved predictions does not retrain the models or reproduce every supplementary analysis. The plotting code uses Matplotlib's LaTeX rendering and therefore requires a working TeX installation and its font/rendering dependencies.
 
 ## Archived software
 
-Version v1.0.0 is cited in the manuscript as https://doi.org/10.5281/zenodo.20568995. The development branch contains later changes. The v1.0.0 citation identifies that release, not the current development branch.
+Version v1.1.0 is cited in the manuscript as https://doi.org/10.5281/zenodo.23781902. The development branch contains later changes. The v1.1.0 citation identifies that release, not the current development branch.
